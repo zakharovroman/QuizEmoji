@@ -12,3 +12,34 @@ struct TeamMember {
     let loginGitHub: String
     let Position: String
 }
+
+extension TeamMember {
+    
+    static func memberInfo() -> [TeamMember] {
+        return [
+            TeamMember(
+                name: "Roman Zaharov",
+                email: "lr.mos@mail.ru",
+                loginGitHub: "zakharovroman",
+                Position: "Team lead"),
+            
+            TeamMember(
+                name: "Angela",
+                email: "lr.mos@mail.ru",
+                loginGitHub: "AnzhelikaP",
+                Position: "ios developer"),
+            
+            TeamMember(
+                name: "Roman",
+                email: "lr.mos@mail.ru",
+                loginGitHub: "romcha1",
+                Position: "ios developer"),
+            
+            TeamMember(
+                name: "Vlad",
+                email: "lr.mos@mail.ru",
+                loginGitHub: "Vladchere",
+                Position: "ios developer")
+        ]
+    }
+}
