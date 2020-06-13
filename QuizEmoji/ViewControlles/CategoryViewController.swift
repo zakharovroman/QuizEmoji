@@ -15,7 +15,7 @@ class CategoryViewController: UIViewController {
     
     // MARK: - Private properties
     var level: Level!
-    var category: Category?
+    private var category: Category?
     
     override func viewDidLoad() {
         super.viewDidLoad()
