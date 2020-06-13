@@ -29,6 +29,7 @@
 		3033E3BC2494C2ED008E6821 /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3033E3BB2494C2ED008E6821 /* Results.storyboard */; };
 		3033E3BE2494C2FE008E6821 /* Team.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3033E3BD2494C2FE008E6821 /* Team.storyboard */; };
 		3033E3C02494C3A2008E6821 /* TeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3BF2494C3A2008E6821 /* TeamMember.swift */; };
+		6301999A2494D70E007D2F80 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630199992494D70E007D2F80 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		3033E3BB2494C2ED008E6821 /* Results.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
 		3033E3BD2494C2FE008E6821 /* Team.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Team.storyboard; sourceTree = "<group>"; };
 		3033E3BF2494C3A2008E6821 /* TeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMember.swift; sourceTree = "<group>"; };
+		630199992494D70E007D2F80 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				3033E3AD2494C063008E6821 /* LevelViewController.swift */,
+				630199992494D70E007D2F80 /* TabBarViewController.swift */,
 				3033E3AF2494C075008E6821 /* CategoryViewController.swift */,
 				3033E3B12494C085008E6821 /* QuestionViewController.swift */,
 				3033E3B32494C09A008E6821 /* ResultViewController.swift */,
@@ -232,6 +235,7 @@
 				3033E3BA2494C0E9008E6821 /* TeamMemberViewController.swift in Sources */,
 				3033E3A42494BF86008E6821 /* Level.swift in Sources */,
 				3033E3B62494C0B9008E6821 /* ResultTableViewController.swift in Sources */,
+				6301999A2494D70E007D2F80 /* TabBarViewController.swift in Sources */,
 				3033E3A22494BF67008E6821 /* Category.swift in Sources */,
 				3033E3C02494C3A2008E6821 /* TeamMember.swift in Sources */,
 				3033E3B02494C075008E6821 /* CategoryViewController.swift in Sources */,
