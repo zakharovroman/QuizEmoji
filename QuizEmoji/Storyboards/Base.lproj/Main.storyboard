@@ -31,9 +31,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="39"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <state key="normal" title="Начальный">
-                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="Тесты 1 уровня"/>
                                                 <connections>
                                                     <action selector="levelButtonPressed:" destination="be3-j6-r1P" eventType="touchUpInside" id="vFo-A1-ufd"/>
                                                 </connections>
@@ -42,9 +40,7 @@
                                                 <rect key="frame" x="0.0" y="55" width="343" height="39"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <state key="normal" title="Продвинутый">
-                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="Тесты 2 уровня"/>
                                                 <connections>
                                                     <action selector="levelButtonPressed:" destination="be3-j6-r1P" eventType="touchUpInside" id="7bF-3Z-JHX"/>
                                                 </connections>
@@ -53,9 +49,7 @@
                                                 <rect key="frame" x="0.0" y="110" width="343" height="39"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <state key="normal" title="Экспертный">
-                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="Тесты 3 уровня"/>
                                                 <connections>
                                                     <action selector="levelButtonPressed:" destination="be3-j6-r1P" eventType="touchUpInside" id="kTn-L9-Vqo"/>
                                                 </connections>
@@ -65,7 +59,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="P8D-Dk-gEw" firstAttribute="top" secondItem="Qsw-H1-R7E" secondAttribute="top" constant="50" id="8m5-im-0k3"/>
                             <constraint firstItem="Qsw-H1-R7E" firstAttribute="trailing" secondItem="P8D-Dk-gEw" secondAttribute="trailing" constant="16" id="Hf8-7K-0po"/>
@@ -117,9 +111,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="39"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <state key="normal" title="Автомобили">
-                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="Категория 1"/>
                                                 <connections>
                                                     <action selector="categoryButtonPressed:" destination="0JD-YK-NzC" eventType="touchUpInside" id="wHg-ZU-uR8"/>
                                                 </connections>
@@ -128,9 +120,7 @@
                                                 <rect key="frame" x="0.0" y="55" width="343" height="39"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <state key="normal" title="Кино">
-                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="Категория 2"/>
                                                 <connections>
                                                     <action selector="categoryButtonPressed:" destination="0JD-YK-NzC" eventType="touchUpInside" id="1MV-eO-gpt"/>
                                                 </connections>
@@ -139,9 +129,7 @@
                                                 <rect key="frame" x="0.0" y="110" width="343" height="39"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <state key="normal" title="Книги">
-                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="Категория 3"/>
                                                 <connections>
                                                     <action selector="categoryButtonPressed:" destination="0JD-YK-NzC" eventType="touchUpInside" id="Zod-Jf-JFy"/>
                                                 </connections>

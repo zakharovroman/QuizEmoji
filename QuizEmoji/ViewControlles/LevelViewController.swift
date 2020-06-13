@@ -10,59 +10,46 @@ import UIKit
 
 class LevelViewController: UIViewController {
     
-    
-    
+    // MARK: - IBOutlets
     @IBOutlet var levelButtons: [UIButton]!
     
     // MARK: - Private properties
-    var levelValue = ""
+    private var level: Level?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateUI()
     }
     
-    
-    // MARK: - IB Actions
-    
-    @IBAction func levelButtonPressed(_ sender: Any) {
-        
-        let currentLevel = (sender as! UIButton).tag
-        
-        switch currentLevel {
-        case 0: levelValue = "Начальный"
-        case 1: levelValue = "Продвинутый"
-        case 2: levelValue = "Экспертный"
-        default:
-            break
-        }
+    // MARK: - IBActions
+    @IBAction func levelButtonPressed(_ sender: UIButton) {
+        guard let levelIndex = levelButtons.firstIndex(of: sender) else { return }
+        level = Level.element(at: levelIndex)
         performSegue(withIdentifier: "categorySegue", sender: nil)
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
 
 // MARK: - Private Methods
 extension LevelViewController {
-    private func updateUI() {
-        
-    }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     
-        if segue.identifier == "categorySegue" {
-            let levelResult = segue.destination as! CategoryViewController
-            levelResult.resultLevel = levelValue
+    private func updateUI() {
+        for (button, level) in zip(levelButtons, Level.allCases) {
+            button.setTitle(level.rawValue, for: .normal)
         }
     }
+    
+}
+
+// MARK: - Navigation
+extension LevelViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "categorySegue" {
+            let categoryViewController = segue.destination as! CategoryViewController
+            categoryViewController.level = level
+        }
+    }
+    
 }
 

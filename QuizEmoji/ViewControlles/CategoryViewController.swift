@@ -14,12 +14,12 @@ class CategoryViewController: UIViewController {
     @IBOutlet var categoryButtons: [UIButton]!
     
     var nameCategory = ""
-    var resultLevel = ""
+    var level: Level!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(level ?? "Не выбран уровень")
     }
     
     
@@ -52,6 +52,10 @@ extension CategoryViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "questionSegue" {
+            //ЗДЕСЬ ПЕРЕДАТЬ УРОВЕНЬ И КАТГОРИЮ В ПЕРЕМЕННЫЕ КЛАССА
+//            var level = Level.one
+//            var category = Category.auto
+            
             //let categoryResult = segue.destination as! QuestionViewController
             //categoryResult.nameCategoryForQuestions = nameCategory
             //categoryResult.nameLevelForQuestions = resultLevel
