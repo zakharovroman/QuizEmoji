@@ -52,9 +52,9 @@ extension CategoryViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "questionSegue" {
-            let categoryResult = segue.destination as! QuestionViewController
-            categoryResult.nameCategoryForQuestions = nameCategory
-            categoryResult.nameLevelForQuestions = resultLevel
+            //let categoryResult = segue.destination as! QuestionViewController
+            //categoryResult.nameCategoryForQuestions = nameCategory
+            //categoryResult.nameLevelForQuestions = resultLevel
             
         }
     }
