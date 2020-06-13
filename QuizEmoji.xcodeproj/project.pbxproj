@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3033E3872494BCE6008E6821 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3862494BCE6008E6821 /* AppDelegate.swift */; };
 		3033E3892494BCE6008E6821 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3882494BCE6008E6821 /* SceneDelegate.swift */; };
-		3033E38B2494BCE6008E6821 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E38A2494BCE6008E6821 /* ViewController.swift */; };
 		3033E38E2494BCE6008E6821 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3033E38C2494BCE6008E6821 /* Main.storyboard */; };
 		3033E3902494BCE7008E6821 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3033E38F2494BCE7008E6821 /* Assets.xcassets */; };
 		3033E3932494BCE7008E6821 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3033E3912494BCE7008E6821 /* LaunchScreen.storyboard */; };
@@ -27,13 +26,15 @@
 		3033E3B62494C0B9008E6821 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3B52494C0B9008E6821 /* ResultTableViewController.swift */; };
 		3033E3B82494C0C9008E6821 /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3B72494C0C9008E6821 /* TeamTableViewController.swift */; };
 		3033E3BA2494C0E9008E6821 /* TeamMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3B92494C0E9008E6821 /* TeamMemberViewController.swift */; };
+		3033E3BC2494C2ED008E6821 /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3033E3BB2494C2ED008E6821 /* Results.storyboard */; };
+		3033E3BE2494C2FE008E6821 /* Team.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3033E3BD2494C2FE008E6821 /* Team.storyboard */; };
+		3033E3C02494C3A2008E6821 /* TeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3BF2494C3A2008E6821 /* TeamMember.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3033E3832494BCE6008E6821 /* QuizEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3033E3862494BCE6008E6821 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3033E3882494BCE6008E6821 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3033E38A2494BCE6008E6821 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3033E38D2494BCE6008E6821 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3033E38F2494BCE7008E6821 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3033E3922494BCE7008E6821 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +53,9 @@
 		3033E3B52494C0B9008E6821 /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
 		3033E3B72494C0C9008E6821 /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
 		3033E3B92494C0E9008E6821 /* TeamMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberViewController.swift; sourceTree = "<group>"; };
+		3033E3BB2494C2ED008E6821 /* Results.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
+		3033E3BD2494C2FE008E6821 /* Team.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Team.storyboard; sourceTree = "<group>"; };
+		3033E3BF2494C3A2008E6821 /* TeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMember.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			children = (
 				3033E38C2494BCE6008E6821 /* Main.storyboard */,
 				3033E3912494BCE7008E6821 /* LaunchScreen.storyboard */,
+				3033E3BB2494C2ED008E6821 /* Results.storyboard */,
+				3033E3BD2494C2FE008E6821 /* Team.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -105,7 +111,6 @@
 		3033E39B2494BDEA008E6821 /* ViewControlles */ = {
 			isa = PBXGroup;
 			children = (
-				3033E38A2494BCE6008E6821 /* ViewController.swift */,
 				3033E3AD2494C063008E6821 /* LevelViewController.swift */,
 				3033E3AF2494C075008E6821 /* CategoryViewController.swift */,
 				3033E3B12494C085008E6821 /* QuestionViewController.swift */,
@@ -127,6 +132,7 @@
 				3033E3A72494BFC4008E6821 /* Result.swift */,
 				3033E3A92494BFDF008E6821 /* ResultType.swift */,
 				3033E3AB2494BFFC008E6821 /* StatusTest.swift */,
+				3033E3BF2494C3A2008E6821 /* TeamMember.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +216,8 @@
 				3033E3932494BCE7008E6821 /* LaunchScreen.storyboard in Resources */,
 				3033E3902494BCE7008E6821 /* Assets.xcassets in Resources */,
 				3033E38E2494BCE6008E6821 /* Main.storyboard in Resources */,
+				3033E3BC2494C2ED008E6821 /* Results.storyboard in Resources */,
+				3033E3BE2494C2FE008E6821 /* Team.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,8 +232,8 @@
 				3033E3BA2494C0E9008E6821 /* TeamMemberViewController.swift in Sources */,
 				3033E3A42494BF86008E6821 /* Level.swift in Sources */,
 				3033E3B62494C0B9008E6821 /* ResultTableViewController.swift in Sources */,
-				3033E38B2494BCE6008E6821 /* ViewController.swift in Sources */,
 				3033E3A22494BF67008E6821 /* Category.swift in Sources */,
+				3033E3C02494C3A2008E6821 /* TeamMember.swift in Sources */,
 				3033E3B02494C075008E6821 /* CategoryViewController.swift in Sources */,
 				3033E3B82494C0C9008E6821 /* TeamTableViewController.swift in Sources */,
 				3033E3872494BCE6008E6821 /* AppDelegate.swift in Sources */,
