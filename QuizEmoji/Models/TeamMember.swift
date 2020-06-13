@@ -15,7 +15,7 @@ struct TeamMember {
 
 extension TeamMember {
     
-    static func memberInfo() -> [TeamMember] {
+    static func getTeam() -> [TeamMember] {
         return [
             TeamMember(
                 name: "Roman Zaharov",
