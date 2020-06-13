@@ -29,11 +29,8 @@ MARK: Extensions после класса
 class QuestionViewController: UIViewController {
 
     // MARK: Public properties
-    var level = Level.one
-    var category = Category.auto
-    // заменить когда будет вызов
-    //var level: Level!
-    //var category: Category!
+    var level: Level!
+    var category: Category!
     
     //MARK: Private properties
     private var questions = [Question]()
@@ -50,6 +47,8 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //print("\(level.rawValue) \(category.rawValue)")
         //navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem?.title = "Прервать"
         updateUI()

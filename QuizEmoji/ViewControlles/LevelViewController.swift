@@ -14,7 +14,7 @@ class LevelViewController: UIViewController {
     @IBOutlet var levelButtons: [UIButton]!
     
     // MARK: - Private properties
-    private var level: Level?
+    var level: Level?
     
     override func viewDidLoad() {
         super.viewDidLoad()
