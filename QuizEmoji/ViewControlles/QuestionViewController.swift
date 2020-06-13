@@ -28,3 +28,11 @@ class QuestionViewController: UIViewController {
     */
 
 }
+
+
+// MARK: - Private Methods
+extension QuestionViewController {
+    private func updateUI() {
+
+    }
+}
