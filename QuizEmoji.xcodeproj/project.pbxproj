@@ -20,6 +20,13 @@
 		3033E3A82494BFC4008E6821 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3A72494BFC4008E6821 /* Result.swift */; };
 		3033E3AA2494BFDF008E6821 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3A92494BFDF008E6821 /* ResultType.swift */; };
 		3033E3AC2494BFFC008E6821 /* StatusTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3AB2494BFFC008E6821 /* StatusTest.swift */; };
+		3033E3AE2494C063008E6821 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3AD2494C063008E6821 /* LevelViewController.swift */; };
+		3033E3B02494C075008E6821 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3AF2494C075008E6821 /* CategoryViewController.swift */; };
+		3033E3B22494C085008E6821 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3B12494C085008E6821 /* QuestionViewController.swift */; };
+		3033E3B42494C09A008E6821 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3B32494C09A008E6821 /* ResultViewController.swift */; };
+		3033E3B62494C0B9008E6821 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3B52494C0B9008E6821 /* ResultTableViewController.swift */; };
+		3033E3B82494C0C9008E6821 /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3B72494C0C9008E6821 /* TeamTableViewController.swift */; };
+		3033E3BA2494C0E9008E6821 /* TeamMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3B92494C0E9008E6821 /* TeamMemberViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +45,13 @@
 		3033E3A72494BFC4008E6821 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		3033E3A92494BFDF008E6821 /* ResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
 		3033E3AB2494BFFC008E6821 /* StatusTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTest.swift; sourceTree = "<group>"; };
+		3033E3AD2494C063008E6821 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
+		3033E3AF2494C075008E6821 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		3033E3B12494C085008E6821 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		3033E3B32494C09A008E6821 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		3033E3B52494C0B9008E6821 /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
+		3033E3B72494C0C9008E6821 /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
+		3033E3B92494C0E9008E6821 /* TeamMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +106,13 @@
 			isa = PBXGroup;
 			children = (
 				3033E38A2494BCE6008E6821 /* ViewController.swift */,
+				3033E3AD2494C063008E6821 /* LevelViewController.swift */,
+				3033E3AF2494C075008E6821 /* CategoryViewController.swift */,
+				3033E3B12494C085008E6821 /* QuestionViewController.swift */,
+				3033E3B32494C09A008E6821 /* ResultViewController.swift */,
+				3033E3B52494C0B9008E6821 /* ResultTableViewController.swift */,
+				3033E3B72494C0C9008E6821 /* TeamTableViewController.swift */,
+				3033E3B92494C0E9008E6821 /* TeamMemberViewController.swift */,
 			);
 			path = ViewControlles;
 			sourceTree = "<group>";
@@ -199,12 +220,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3033E3AE2494C063008E6821 /* LevelViewController.swift in Sources */,
+				3033E3BA2494C0E9008E6821 /* TeamMemberViewController.swift in Sources */,
 				3033E3A42494BF86008E6821 /* Level.swift in Sources */,
+				3033E3B62494C0B9008E6821 /* ResultTableViewController.swift in Sources */,
 				3033E38B2494BCE6008E6821 /* ViewController.swift in Sources */,
 				3033E3A22494BF67008E6821 /* Category.swift in Sources */,
+				3033E3B02494C075008E6821 /* CategoryViewController.swift in Sources */,
+				3033E3B82494C0C9008E6821 /* TeamTableViewController.swift in Sources */,
 				3033E3872494BCE6008E6821 /* AppDelegate.swift in Sources */,
+				3033E3B22494C085008E6821 /* QuestionViewController.swift in Sources */,
 				3033E3AA2494BFDF008E6821 /* ResultType.swift in Sources */,
 				3033E3892494BCE6008E6821 /* SceneDelegate.swift in Sources */,
+				3033E3B42494C09A008E6821 /* ResultViewController.swift in Sources */,
 				3033E3A62494BFA8008E6821 /* Question.swift in Sources */,
 				3033E3AC2494BFFC008E6821 /* StatusTest.swift in Sources */,
 				3033E3A82494BFC4008E6821 /* Result.swift in Sources */,
