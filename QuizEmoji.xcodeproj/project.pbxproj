@@ -56,9 +56,9 @@
 		3033E3852494BCE6008E6821 /* QuizEmoji */ = {
 			isa = PBXGroup;
 			children = (
+				3033E39B2494BDEA008E6821 /* ViewControlles */,
 				3033E3862494BCE6008E6821 /* AppDelegate.swift */,
 				3033E3882494BCE6008E6821 /* SceneDelegate.swift */,
-				3033E38A2494BCE6008E6821 /* ViewController.swift */,
 				3033E39A2494BD18008E6821 /* Storyboards */,
 				3033E38F2494BCE7008E6821 /* Assets.xcassets */,
 				3033E3942494BCE7008E6821 /* Info.plist */,
@@ -73,6 +73,14 @@
 				3033E3912494BCE7008E6821 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3033E39B2494BDEA008E6821 /* ViewControlles */ = {
+			isa = PBXGroup;
+			children = (
+				3033E38A2494BCE6008E6821 /* ViewController.swift */,
+			);
+			path = ViewControlles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
