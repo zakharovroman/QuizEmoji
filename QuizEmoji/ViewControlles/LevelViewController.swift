@@ -28,3 +28,11 @@ class LevelViewController: UIViewController {
     */
 
 }
+
+// MARK: - Private Methods
+extension LevelViewController {
+    private func updateUI() {
+
+    }
+}
+
