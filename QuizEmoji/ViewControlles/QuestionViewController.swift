@@ -9,11 +9,14 @@
 import UIKit
 
 class QuestionViewController: UIViewController {
-
+    
+     var nameLevelForQuestions = ""
+     var nameCategoryForQuestions = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      print("\(nameLevelForQuestions) \(nameCategoryForQuestions)")
     }
     
 

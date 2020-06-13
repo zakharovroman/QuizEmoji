@@ -34,22 +34,31 @@
                                                 <state key="normal" title="Начальный">
                                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="levelButtonPressed:" destination="be3-j6-r1P" eventType="touchUpInside" id="vFo-A1-ufd"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3h2-7P-awy">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3h2-7P-awy">
                                                 <rect key="frame" x="0.0" y="55" width="343" height="39"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="Продвинутый">
                                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="levelButtonPressed:" destination="be3-j6-r1P" eventType="touchUpInside" id="7bF-3Z-JHX"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iP-Pc-C43">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iP-Pc-C43">
                                                 <rect key="frame" x="0.0" y="110" width="343" height="39"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <state key="normal" title="Эксперный">
+                                                <state key="normal" title="Экспертный">
                                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="levelButtonPressed:" destination="be3-j6-r1P" eventType="touchUpInside" id="kTn-L9-Vqo"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -74,6 +83,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outletCollection property="levelButtons" destination="Ive-dt-bfW" collectionClass="NSMutableArray" id="xXQ-Fa-hNX"/>
+                        <outletCollection property="levelButtons" destination="3h2-7P-awy" collectionClass="NSMutableArray" id="gTx-ma-8jw"/>
+                        <outletCollection property="levelButtons" destination="6iP-Pc-C43" collectionClass="NSMutableArray" id="5CR-Wb-Ect"/>
                         <segue destination="0JD-YK-NzC" kind="show" identifier="categorySegue" id="F05-a1-WrT"/>
                     </connections>
                 </viewController>
@@ -108,22 +120,31 @@
                                                 <state key="normal" title="Автомобили">
                                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="categoryButtonPressed:" destination="0JD-YK-NzC" eventType="touchUpInside" id="wHg-ZU-uR8"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YV-uN-Uti">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YV-uN-Uti">
                                                 <rect key="frame" x="0.0" y="55" width="343" height="39"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="Кино">
                                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="categoryButtonPressed:" destination="0JD-YK-NzC" eventType="touchUpInside" id="1MV-eO-gpt"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdS-FV-Qvu">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdS-FV-Qvu">
                                                 <rect key="frame" x="0.0" y="110" width="343" height="39"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="Книги">
                                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="categoryButtonPressed:" destination="0JD-YK-NzC" eventType="touchUpInside" id="Zod-Jf-JFy"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -148,6 +169,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outletCollection property="categoryButtons" destination="SiC-ZS-vMk" collectionClass="NSMutableArray" id="L24-ek-PWk"/>
+                        <outletCollection property="categoryButtons" destination="8YV-uN-Uti" collectionClass="NSMutableArray" id="HZc-oh-on7"/>
+                        <outletCollection property="categoryButtons" destination="RdS-FV-Qvu" collectionClass="NSMutableArray" id="QPg-q1-EFx"/>
                         <segue destination="My8-Km-hPo" kind="show" identifier="questionSegue" id="YRT-TE-SgZ"/>
                     </connections>
                 </viewController>
@@ -360,8 +384,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9mI-R2-Hdi"/>
-        <segue reference="yfQ-HM-6BP"/>
+        <segue reference="VzF-Nv-JlK"/>
+        <segue reference="YRT-TE-SgZ"/>
         <segue reference="F05-a1-WrT"/>
     </inferredMetricsTieBreakers>
     <resources>

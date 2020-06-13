@@ -9,22 +9,53 @@
 import UIKit
 
 class CategoryViewController: UIViewController {
-
+    
+    
+    @IBOutlet var categoryButtons: [UIButton]!
+    
+    var nameCategory = ""
+    var resultLevel = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
-
+    
+    @IBAction func categoryButtonPressed(_ sender: Any) {
+        
+        let currentLevel = (sender as! UIButton).tag
+        
+        switch currentLevel {
+        case 0: nameCategory = "Автомобили"
+        case 1: nameCategory = "Кино"
+        case 2: nameCategory = "Книги"
+        default:
+            break
+        }
+        performSegue(withIdentifier: "questionSegue", sender: nil)    }
     /*
-    // MARK: - Navigation
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+extension CategoryViewController {
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "questionSegue" {
+            let categoryResult = segue.destination as! QuestionViewController
+            categoryResult.nameCategoryForQuestions = nameCategory
+            categoryResult.nameLevelForQuestions = resultLevel
+            
+        }
     }
-    */
-
 }
