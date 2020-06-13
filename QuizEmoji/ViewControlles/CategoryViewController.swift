@@ -49,7 +49,7 @@ class CategoryViewController: UIViewController {
                     //ЗДЕСЬ ПЕРЕДАEM УРОВЕНЬ И КАТГОРИЮ В ПЕРЕМЕННЫЕ КЛАССА
                 let questionViewController = segue.destination as! QuestionViewController
                     questionViewController.level = level
-                    questionViewController.category = category
+                    questionViewController.category = category!
                 }
             }
         }
