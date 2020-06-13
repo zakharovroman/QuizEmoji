@@ -28,3 +28,11 @@ class TeamMemberViewController: UIViewController {
     */
 
 }
+
+// MARK: - Private Methods
+extension TeamMemberViewController {
+    private func updateUI() {
+
+    }
+}
+
