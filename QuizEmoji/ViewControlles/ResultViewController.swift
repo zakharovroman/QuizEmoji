@@ -10,6 +10,8 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    var result: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true

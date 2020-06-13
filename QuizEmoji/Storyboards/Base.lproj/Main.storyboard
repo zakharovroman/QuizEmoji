@@ -253,6 +253,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="My8-Km-hPo" eventType="touchUpInside" id="dgw-J1-B9H"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxu-Gs-Z9I">
                                         <rect key="frame" x="0.0" y="40" width="335" height="36"/>
@@ -261,6 +264,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="My8-Km-hPo" eventType="touchUpInside" id="adn-H6-pMQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GM0-ug-5Ob">
                                         <rect key="frame" x="0.0" y="80" width="335" height="36"/>
@@ -269,6 +275,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="My8-Km-hPo" eventType="touchUpInside" id="ZGR-Ie-zbU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3j-QK-Oec">
                                         <rect key="frame" x="0.0" y="120" width="335" height="36"/>
@@ -277,6 +286,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="My8-Km-hPo" eventType="touchUpInside" id="Sh8-hV-wlG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -316,13 +328,23 @@
                         <viewLayoutGuide key="safeArea" id="v9M-bE-vbX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос n/10" id="bqb-Jp-xnI">
-                        <barButtonItem key="rightBarButtonItem" title="Вперед" id="9TF-yK-LcM">
+                        <barButtonItem key="rightBarButtonItem" title="Next question" id="9TF-yK-LcM">
                             <connections>
-                                <segue destination="IcH-av-Fgb" kind="show" identifier="" id="9mI-R2-Hdi"/>
+                                <action selector="nextQuestionBarButtonItem:" destination="My8-Km-hPo" id="ssi-bc-KJM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="answerTextLabel" destination="qzB-3R-fMn" id="kCF-iC-Ijx"/>
+                        <outlet property="answersBattonsStackView" destination="mqj-e2-5lg" id="jG7-WC-NbL"/>
+                        <outlet property="progressView" destination="EJQ-vF-ENb" id="l19-SK-zb3"/>
+                        <outlet property="questionEmojiLabel" destination="Hw4-nn-syJ" id="ne9-Ju-ud6"/>
+                        <outlet property="questionEmojiTextStackView" destination="BOR-Yq-gZ3" id="Xsb-Qi-cMY"/>
+                        <outlet property="questionTextLabel" destination="HaA-TH-Q0i" id="UPB-kh-q7b"/>
+                        <outletCollection property="answersButtons" destination="vWF-H9-5Nf" collectionClass="NSMutableArray" id="SBq-o2-8CG"/>
+                        <outletCollection property="answersButtons" destination="Dxu-Gs-Z9I" collectionClass="NSMutableArray" id="S0S-wi-Cno"/>
+                        <outletCollection property="answersButtons" destination="GM0-ug-5Ob" collectionClass="NSMutableArray" id="K1c-Fp-4PI"/>
+                        <outletCollection property="answersButtons" destination="Z3j-QK-Oec" collectionClass="NSMutableArray" id="XBo-me-flf"/>
                         <segue destination="IcH-av-Fgb" kind="show" identifier="resultSegue" id="VzF-Nv-JlK"/>
                     </connections>
                 </viewController>
@@ -372,9 +394,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VzF-Nv-JlK"/>
         <segue reference="YRT-TE-SgZ"/>
-        <segue reference="F05-a1-WrT"/>
+        <segue reference="r87-hk-O1D"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>

@@ -28,50 +28,70 @@ MARK: Extensions после класса
 
 class QuestionViewController: UIViewController {
 
-    // MARK: Public properties
+    // MARK: - IBOutlets
+    @IBOutlet weak var progressView: UIProgressView!
+    
+    @IBOutlet weak var questionEmojiTextStackView: UIStackView!
+    @IBOutlet weak var answersBattonsStackView: UIStackView!
+    
+    @IBOutlet weak var questionEmojiLabel: UILabel!
+    @IBOutlet weak var questionTextLabel: UILabel!
+    
+    @IBOutlet var answersButtons: [UIButton]!
+    
+    @IBOutlet weak var answerTextLabel: UILabel!
+    
+    // MARK: - Public properties
     var level = Level.one
     var category = Category.auto
     // заменить когда будет вызов
     //var level: Level!
     //var category: Category!
     
-    //MARK: Private properties
+    //MARK: - Private properties
     private var questions = [Question]()
     private var questionIndex = 0
+    private var currentQuestion: Question?
     private var answersChoosen: [Answer] = []
     private var currentAnswers: [Answer] {
         questions[questionIndex].answers
     }
+    private var currentAnswer: Answer?
     
+    // MARK: - Initializers
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         questions = Question.getQuestions(level: level, category: category)
+        //currentQuestion = questions.first!
     }
     
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         //navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem?.title = "Прервать"
-        updateUI()
+        showCurrentQuestion()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - IB Actions
+    @IBAction func answerButtonPressed(_ sender: UIButton) {
+        guard let answerIndex = answersButtons.firstIndex(of: sender) else { return }
+        let currentAnswer = currentAnswers[answerIndex]
+        answersChoosen.append(currentAnswer)
+        showCurrentAnswer(with: currentAnswer)
     }
-    */
-
+    
+    @IBAction func nextQuestionBarButtonItem(_ sender: UIBarButtonItem) {
+        nextQuestion()
+    }
 }
 
 
-//   // MARK: - IB Actions
+    
+
+
 //    @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
-//        guard let answerIndex = singleButtons.firstIndex(of: sender) else { return }
+//        guard let answerIndex = answersButtons.firstIndex(of: sender) else { return }
 //        let currentAnswer = currentAnswers[answerIndex]
 //        answersChoosen.append(currentAnswer)
 //        nextQuestion()
@@ -100,45 +120,49 @@ class QuestionViewController: UIViewController {
 
 // MARK: - Private Methods
 extension QuestionViewController {
-    private func updateUI() {
-        
-//        // Hide everything
-//        for stackView in [singleStackView, multipleStackView, rangedStackView] {
-//            stackView?.isHidden = true
-//        }
-//
-//        // Get current question
-//        let currentQuestion = questions[questionIndex]
-//
-//        // Set current question for question label
-//        questionLabel.text = currentQuestion.text
-//
-//        // Calculate progress
-//        let totalProgress = Float(questionIndex) / Float(questions.count)
-//
-//        // Set progress for progress view
-//        progressView.setProgress(totalProgress, animated: true)
-//
-//        // Set navigation title
-//        title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
-//
-//        showCurrentAnswers(for: currentQuestion)
+    
+    private func showCurrentQuestion() {
+        // Hide everything in Answer
+        for item in [answerTextLabel] {
+            item?.isHidden = true
+        }
+        for item in [questionEmojiTextStackView, answersBattonsStackView] {
+            item?.isHidden = false
+        }
+        // Get current question and
+        currentQuestion = questions[questionIndex]
+        //currentAnswers = currentQuestion.answers
+            
+        // Set current question UI
+        questionEmojiLabel.text = currentQuestion?.emoji
+        questionTextLabel.text = currentQuestion?.text
+
+        // Calculate progress
+        let totalProgress = Float(questionIndex) / Float(questions.count)
+
+        // Set progress for progress view
+        progressView.setProgress(totalProgress, animated: true)
+
+        // Set navigation title
+        title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
+
+        showAnswersButtons(with: currentAnswers)
     }
     
-    private func showCurrentAnswers(for question: Question) {
-//        switch question.type {
-//        case .single: showSingleStackView(with: currentAnswers)
-//        case .multiple: showMultipleStackView(with: currentAnswers)
-//        case .ranged: showRangedStackView(with: currentAnswers)
-//        }
+    private func showCurrentAnswer(with currentAnswer: Answer) {
+        // Hide everything in Question
+        for item in [questionEmojiTextStackView, answersBattonsStackView] {
+            item?.isHidden = true
+        }
+        answerTextLabel.isHidden = false
+        answerTextLabel.text = currentAnswer.text
     }
     
-    private func showSingleStackView(with answers: [Answer]) {
-//        singleStackView.isHidden = false
-//
-//        for (button, answer) in zip(singleButtons, answers) {
-//            button.setTitle(answer.text, for: .normal)
-//        }
+    private func showAnswersButtons(with answers: [Answer]) {
+
+        for (button, answer) in zip(answersButtons, answers) {
+            button.setTitle(answer.text, for: .normal)
+        }
     }
     
     private func showMultipleStackView(with answers: [Answer]) {
@@ -159,20 +183,20 @@ extension QuestionViewController {
 
 // MARK: - Navigation
 extension QuestionViewController {
+    
     private func nextQuestion() {
         questionIndex += 1
-        
         if questionIndex < questions.count {
-            updateUI()
+            showCurrentQuestion()
         } else {
-            //performSegue(withIdentifier: "ResultSegue", sender: nil)
+            performSegue(withIdentifier: "resultSegue", sender: nil)
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "resultSegue" else { return }
+        let resultViewController = segue.destination as! ResultViewController
+        resultViewController.result = "Здесь должен быть результат"
+    }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard segue.identifier == "ResultSegue" else { return }
-//        let resultsVC = segue.destination as! ResultsViewController
-//        resultsVC.answers = answersChoosen
-//    }
 }
