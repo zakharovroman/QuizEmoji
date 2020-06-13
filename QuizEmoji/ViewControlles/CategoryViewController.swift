@@ -10,12 +10,12 @@ import UIKit
 
 class CategoryViewController: UIViewController {
     
-    
+    // MARK: - IBOutlets
     @IBOutlet var categoryButtons: [UIButton]!
     
-    var nameCategory = ""
+    // MARK: - Private properties
     var level: Level!
-    
+    private var category: Category?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,43 +23,33 @@ class CategoryViewController: UIViewController {
     }
     
     
-    @IBAction func categoryButtonPressed(_ sender: Any) {
-        
-        let currentLevel = (sender as! UIButton).tag
-        
-        switch currentLevel {
-        case 0: nameCategory = "Автомобили"
-        case 1: nameCategory = "Кино"
-        case 2: nameCategory = "Книги"
-        default:
-            break
+    @IBAction func categoryButtonPressed(_ sender: UIButton) {
+           guard let categoryIndex = categoryButtons.firstIndex(of: sender) else { return }
+                category = Category.element(at: categoryIndex)
+                performSegue(withIdentifier: "questionSegue", sender: nil)
+                
+            }
+            /*
+             // MARK: - Navigation
+             
+             // In a storyboard-based application, you will often want to do a little preparation before navigation
+             override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+             // Get the new view controller using segue.destination.
+             // Pass the selected object to the new view controller.
+             }
+             */
+            
         }
-        performSegue(withIdentifier: "questionSegue", sender: nil)    }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
-}
 
-extension CategoryViewController {
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "questionSegue" {
-            //ЗДЕСЬ ПЕРЕДАТЬ УРОВЕНЬ И КАТГОРИЮ В ПЕРЕМЕННЫЕ КЛАССА
-//            var level = Level.one
-//            var category = Category.auto
+        extension CategoryViewController {
             
-            //let categoryResult = segue.destination as! QuestionViewController
-            //categoryResult.nameCategoryForQuestions = nameCategory
-            //categoryResult.nameLevelForQuestions = resultLevel
-            
+            override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                
+                if segue.identifier == "questionSegue" {
+                    //ЗДЕСЬ ПЕРЕДАEM УРОВЕНЬ И КАТГОРИЮ В ПЕРЕМЕННЫЕ КЛАССА
+                let questionViewController = segue.destination as! QuestionViewController
+                    questionViewController.level = level
+                    questionViewController.category = category
+                }
+            }
         }
-    }
-}

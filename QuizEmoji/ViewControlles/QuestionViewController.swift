@@ -68,6 +68,8 @@ class QuestionViewController: UIViewController {
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //print("\(level.rawValue) \(category.rawValue)")
         //navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem?.title = "Прервать"
         showCurrentQuestion()
