@@ -59,12 +59,20 @@
 				3033E3862494BCE6008E6821 /* AppDelegate.swift */,
 				3033E3882494BCE6008E6821 /* SceneDelegate.swift */,
 				3033E38A2494BCE6008E6821 /* ViewController.swift */,
-				3033E38C2494BCE6008E6821 /* Main.storyboard */,
+				3033E39A2494BD18008E6821 /* Storyboards */,
 				3033E38F2494BCE7008E6821 /* Assets.xcassets */,
-				3033E3912494BCE7008E6821 /* LaunchScreen.storyboard */,
 				3033E3942494BCE7008E6821 /* Info.plist */,
 			);
 			path = QuizEmoji;
+			sourceTree = "<group>";
+		};
+		3033E39A2494BD18008E6821 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3033E38C2494BCE6008E6821 /* Main.storyboard */,
+				3033E3912494BCE7008E6821 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
