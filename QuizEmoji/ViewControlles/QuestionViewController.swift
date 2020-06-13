@@ -42,11 +42,8 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var answerTextLabel: UILabel!
     
     // MARK: - Public properties
-    var level = Level.one
-    var category = Category.auto
-    // заменить когда будет вызов
-    //var level: Level!
-    //var category: Category!
+    var level: Level!
+    var category: Category!
     
     //MARK: - Private properties
     private var questions = [Question]()
@@ -56,22 +53,25 @@ class QuestionViewController: UIViewController {
     private var currentAnswers: [Answer] {
         questions[questionIndex].answers
     }
-    private var currentAnswer: Answer?
+    //private var currentAnswer: Answer?
     
     // MARK: - Initializers
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         questions = Question.getQuestions(level: level, category: category)
-        //currentQuestion = questions.first!
+        currentQuestion = questions[questionIndex]
+        print("QuestionViewController was been init")
     }
     
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.hidesBackButton = true
         let cancelBarButtonItem = UIBarButtonItem(title: "Отменить", style: .plain, target: self, action: #selector(cancelTest))
         self.navigationItem.leftItemsSupplementBackButton = true
         self.navigationItem.leftBarButtonItem = cancelBarButtonItem
+        
         showCurrentQuestion()
     }
     
@@ -86,39 +86,12 @@ class QuestionViewController: UIViewController {
     @IBAction func nextQuestionBarButtonItem(_ sender: UIBarButtonItem) {
         nextQuestion()
     }
+    
+    deinit {
+         print("QuestionViewController was been dealocated")
+     }
 }
 
-
-    
-
-
-//    @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
-//        guard let answerIndex = answersButtons.firstIndex(of: sender) else { return }
-//        let currentAnswer = currentAnswers[answerIndex]
-//        answersChoosen.append(currentAnswer)
-//        nextQuestion()
-//    }
-//
-//    @IBAction func multipleAnswerButtonPressed() {
-//        for (multipleSwitch, answer) in zip(multipleSwitches, currentAnswers) {
-//            if multipleSwitch.isOn {
-//                answersChoosen.append(answer)
-//            }
-//        }
-//
-//        nextQuestion()
-//    }
-//
-//    @IBAction func rangedAnswerButtonPressed() {
-//        let index = Int(round(rangedSlider.value * Float(currentAnswers.count - 1)))
-//        let currentAnswer = currentAnswers[index]
-//        answersChoosen.append(currentAnswer)
-//        nextQuestion()
-//    }
-//
-//    deinit {
-//        print("QuestionsViewController was been dealocated")
-//    }
 
 // MARK: - Private Methods
 extension QuestionViewController {
@@ -131,9 +104,6 @@ extension QuestionViewController {
         for item in [questionEmojiTextStackView, answersBattonsStackView] {
             item?.isHidden = false
         }
-        // Get current question and
-        currentQuestion = questions[questionIndex]
-        //currentAnswers = currentQuestion.answers
             
         // Set current question UI
         questionEmojiLabel.text = currentQuestion?.emoji
@@ -151,6 +121,12 @@ extension QuestionViewController {
         showAnswersButtons(with: currentAnswers)
     }
     
+    private func showAnswersButtons(with answers: [Answer]) {
+        for (button, answer) in zip(answersButtons, answers) {
+            button.setTitle(answer.text, for: .normal)
+        }
+    }
+    
     private func showCurrentAnswer(with currentAnswer: Answer) {
         // Hide everything in Question
         for item in [questionEmojiTextStackView, answersBattonsStackView] {
@@ -159,28 +135,7 @@ extension QuestionViewController {
         answerTextLabel.isHidden = false
         answerTextLabel.text = currentAnswer.text
     }
-    
-    private func showAnswersButtons(with answers: [Answer]) {
 
-        for (button, answer) in zip(answersButtons, answers) {
-            button.setTitle(answer.text, for: .normal)
-        }
-    }
-    
-    private func showMultipleStackView(with answers: [Answer]) {
-//        multipleStackView.isHidden = false
-//
-//        for (label, answer) in zip(multipleLabels, answers) {
-//            label.text = answer.text
-//        }
-    }
-    
-    private func showRangedStackView(with answers: [Answer]) {
-//        rangedStackView.isHidden = false
-//
-//        rangedLabels.first?.text = answers.first?.text
-//        rangedLabels.last?.text = answers.last?.text
-    }
 }
 
 // MARK: - Navigation
@@ -189,6 +144,7 @@ extension QuestionViewController {
     @objc private func nextQuestion() {
         questionIndex += 1
         if questionIndex < questions.count {
+            currentQuestion = questions[questionIndex]
             showCurrentQuestion()
         } else {
             performSegue(withIdentifier: "resultSegue", sender: nil)
@@ -198,6 +154,7 @@ extension QuestionViewController {
     @objc private func cancelTest() {
         //self.dismiss(animated: true, completion: nil)
         //self.dismissViewControllerAnimated(true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
