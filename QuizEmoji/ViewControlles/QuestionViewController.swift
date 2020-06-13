@@ -58,14 +58,15 @@ class QuestionViewController: UIViewController {
     // MARK: - Initializers
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        questions = Question.getQuestions(level: level, category: category)
-        currentQuestion = questions[questionIndex]
-        print("QuestionViewController was been init")
+        //print("QuestionViewController was been init")
     }
     
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        questions = Question.getQuestions(level: level, category: category)
+        currentQuestion = questions[questionIndex]
         
         navigationItem.hidesBackButton = true
         let cancelBarButtonItem = UIBarButtonItem(title: "Отменить", style: .plain, target: self, action: #selector(cancelTest))
@@ -88,7 +89,7 @@ class QuestionViewController: UIViewController {
     }
     
     deinit {
-         print("QuestionViewController was been dealocated")
+         //print("QuestionViewController was been dealocated")
      }
 }
 

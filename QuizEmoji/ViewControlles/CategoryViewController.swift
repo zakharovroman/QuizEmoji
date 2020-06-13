@@ -20,25 +20,13 @@ class CategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-        print(level ?? "Не выбран уровень")
     }
-    
     
     @IBAction func categoryButtonPressed(_ sender: UIButton) {
         guard let categoryIndex = categoryButtons.firstIndex(of: sender) else { return }
         category = Category.element(at: categoryIndex)
         performSegue(withIdentifier: "questionSegue", sender: nil)
-        
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
 
@@ -50,17 +38,18 @@ extension CategoryViewController {
             button.setTitle(category.rawValue, for: .normal)
         }
     }
+    
 }
+
 // MARK: - Navigation
 extension CategoryViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "questionSegue" {
-            //ЗДЕСЬ ПЕРЕДАEM УРОВЕНЬ И КАТEГОРИЮ В ПЕРЕМЕННЫЕ КЛАССА
             let questionViewController = segue.destination as! QuestionViewController
             questionViewController.level = level
-            questionViewController.category = category!
+            questionViewController.category = category
         }
     }
+    
 }
