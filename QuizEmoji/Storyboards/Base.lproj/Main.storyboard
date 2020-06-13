@@ -64,7 +64,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qsw-H1-R7E"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Level" id="vHr-AI-yNB"/>
+                    <tabBarItem key="tabBarItem" title="Level" image="square.stack.3d.up.fill" catalog="system" id="vHr-AI-yNB"/>
                     <navigationItem key="navigationItem" id="Rha-Pu-lR6">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="LOj-YL-9mU"/>
                         <barButtonItem key="rightBarButtonItem" title="Вперед" id="1Vu-G0-Fcv">
@@ -199,7 +199,7 @@
         <scene sceneID="OCn-mN-Y5m">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9TP-CU-Yuw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Questions" id="chE-fJ-fEE"/>
+                    <tabBarItem key="tabBarItem" title="Questions" image="questionmark.circle.fill" catalog="system" id="chE-fJ-fEE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rt0-YR-Mor">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -364,4 +364,8 @@
         <segue reference="yfQ-HM-6BP"/>
         <segue reference="r87-hk-O1D"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="square.stack.3d.up.fill" catalog="system" width="128" height="124"/>
+    </resources>
 </document>

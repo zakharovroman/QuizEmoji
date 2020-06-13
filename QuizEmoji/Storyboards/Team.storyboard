@@ -10,7 +10,7 @@
         <!--Team-->
         <scene sceneID="hjc-fn-p3L">
             <objects>
-                <tableViewController id="eg4-Dn-gvk" customClass="TeamTableViewController" customModule="QuizGuru" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="eg4-Dn-gvk" customClass="TeamTableViewController" customModule="QuizEmoji" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3NB-yz-H39">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,6 +22,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hD0-f9-iTU" id="rxR-rT-CHJ">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.80789358704103975" green="0.91495136799409538" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -30,8 +31,9 @@
                             <outlet property="delegate" destination="eg4-Dn-gvk" id="FI7-Cg-GRV"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Team" id="rbt-A9-KQ6"/>
+                    <tabBarItem key="tabBarItem" title="Team" image="person.3.fill" catalog="system" id="t0D-7d-b1M"/>
                     <navigationItem key="navigationItem" id="l85-ep-W3b"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="shW-VW-q24" kind="presentation" identifier="teamMemberSegue" modalPresentationStyle="fullScreen" id="dgS-69-PdE"/>
                     </connections>
@@ -40,21 +42,26 @@
             </objects>
             <point key="canvasLocation" x="1022" y="-1098"/>
         </scene>
-        <!--Team Member View Controller-->
+        <!--Team-->
         <scene sceneID="ljP-ks-eIQ">
             <objects>
-                <viewController id="shW-VW-q24" customClass="TeamMemberViewController" customModule="QuizGuru" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="shW-VW-q24" customClass="TeamMemberViewController" customModule="QuizEmoji" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rJx-2O-0H2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.98787030060000003" blue="0.59584518659999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="FnM-Qh-nL9"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Team" image="person.3.fill" catalog="system" id="v6A-Tu-8Rp"/>
                     <navigationItem key="navigationItem" id="Pzg-VB-vQV"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wK1-gt-K2f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1839" y="-1097"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+    </resources>
 </document>
