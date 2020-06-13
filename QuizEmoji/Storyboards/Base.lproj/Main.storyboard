@@ -328,7 +328,7 @@
                         <viewLayoutGuide key="safeArea" id="v9M-bE-vbX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос n/10" id="bqb-Jp-xnI">
-                        <barButtonItem key="rightBarButtonItem" title="Next question" id="9TF-yK-LcM">
+                        <barButtonItem key="rightBarButtonItem" title="Вперед" id="9TF-yK-LcM">
                             <connections>
                                 <action selector="nextQuestionBarButtonItem:" destination="My8-Km-hPo" id="ssi-bc-KJM"/>
                             </connections>

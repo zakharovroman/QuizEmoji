@@ -68,10 +68,10 @@ class QuestionViewController: UIViewController {
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //print("\(level.rawValue) \(category.rawValue)")
-        //navigationItem.hidesBackButton = true
-        navigationItem.leftBarButtonItem?.title = "Прервать"
+        navigationItem.hidesBackButton = true
+        let cancelBarButtonItem = UIBarButtonItem(title: "Отменить", style: .plain, target: self, action: #selector(cancelTest))
+        self.navigationItem.leftItemsSupplementBackButton = true
+        self.navigationItem.leftBarButtonItem = cancelBarButtonItem
         showCurrentQuestion()
     }
     
@@ -186,13 +186,18 @@ extension QuestionViewController {
 // MARK: - Navigation
 extension QuestionViewController {
     
-    private func nextQuestion() {
+    @objc private func nextQuestion() {
         questionIndex += 1
         if questionIndex < questions.count {
             showCurrentQuestion()
         } else {
             performSegue(withIdentifier: "resultSegue", sender: nil)
         }
+    }
+    
+    @objc private func cancelTest() {
+        //self.dismiss(animated: true, completion: nil)
+        //self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
