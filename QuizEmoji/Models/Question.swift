@@ -44,8 +44,34 @@ extension Question {
                                answerText: "Не верно",
                                points: 0)
                     ]
-                )
+                ),
                 // продолжить заполнять вопросы через запятую
+                Question(
+                    level: .one,
+                    category: .auto,
+                    emoji: "🌍🚗🔋🔇",
+                    text: """
+                Чтобы не дать вам ошибиться в этом' вопросе, мы даже «срезали» крышу у красной машинки – для пущей достоверности. Кого загадали?
+                """,
+                    answers: [
+                        Answer(text: "Tesla",
+                               correct: true,
+                               answerText: "Этот вопрос был полной халявой!",
+                               points: 1),
+                        Answer(text: "Geo",
+                               correct: false,
+                               answerText: "Не верно",
+                               points: 0),
+                        Answer(text: "Honda",
+                               correct: false,
+                               answerText: "Не верно",
+                               points: 0),
+                        Answer(text: "Lancia",
+                               correct: false,
+                               answerText: "Не верно",
+                               points: 0)
+                    ]
+                ),
             ]
  
     }
