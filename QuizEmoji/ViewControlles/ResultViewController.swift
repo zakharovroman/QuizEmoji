@@ -28,3 +28,11 @@ class ResultViewController: UIViewController {
     */
 
 }
+
+
+// MARK: - Private Methods
+extension ResultViewController {
+    private func updateUI() {
+
+    }
+}
