@@ -9,30 +9,22 @@
 import UIKit
 
 class TeamMemberViewController: UIViewController {
-
+    
+    var teamInfoForLabel: TeamMember!
+    
+    @IBOutlet var personFotoLabel: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var emailLabel: UILabel!
+    @IBOutlet var loginGitHubLabel: UILabel!
+    @IBOutlet var positionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-
-// MARK: - Private Methods
-extension TeamMemberViewController {
-    private func updateUI() {
-
+        
+        personFotoLabel.image = UIImage(named: teamInfoForLabel.name)
+        nameLabel.text = teamInfoForLabel.name
+        emailLabel.text = teamInfoForLabel.email
+        loginGitHubLabel.text = teamInfoForLabel.loginGitHub
+        positionLabel.text = teamInfoForLabel.position
     }
 }
-

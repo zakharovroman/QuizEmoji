@@ -10,7 +10,7 @@ struct TeamMember {
     let name: String
     let email: String
     let loginGitHub: String
-    let Position: String
+    let position: String
 }
 
 extension TeamMember {
@@ -19,27 +19,33 @@ extension TeamMember {
         return [
             TeamMember(
                 name: "Roman Zaharov",
-                email: "lr.mos@mail.ru",
+                email: "zrv14287@yandex.ru",
                 loginGitHub: "zakharovroman",
-                Position: "Team lead"),
+                position: "Team lead"),
             
             TeamMember(
                 name: "Angela",
-                email: "lr.mos@mail.ru",
+                email: "angela.pikulina@gmail.com",
                 loginGitHub: "AnzhelikaP",
-                Position: "ios developer"),
+                position: "ios developer"),
             
             TeamMember(
                 name: "Roman",
                 email: "lr.mos@mail.ru",
                 loginGitHub: "romcha1",
-                Position: "ios developer"),
+                position: "ios developer"),
             
             TeamMember(
                 name: "Vlad",
-                email: "lr.mos@mail.ru",
+                email: "vladchere.ok@mail.ru",
                 loginGitHub: "Vladchere",
-                Position: "ios developer")
+                position: "ios developer")
+            
+//            TeamMember(
+//            name: "Andrey",
+//            email: "Kryukov.ios@yandex.ru",
+//            loginGitHub: "???",
+//            Position: "ios developer")
         ]
     }
 }
