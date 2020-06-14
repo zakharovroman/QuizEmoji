@@ -72,7 +72,7 @@ extension ResultViewController {
             
         } else {
             resultEmoji = ResultType.Passed.rawValue
-            resultString = ResultType.notPassed.definition
+            resultString = ResultType.Passed.definition
             
         }
         return ("\(resultCount)/10 \(resultEmoji) \(resultString)")
