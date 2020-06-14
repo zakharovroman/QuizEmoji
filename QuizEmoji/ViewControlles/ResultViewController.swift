@@ -10,31 +10,30 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
-    var result: String = ""
+    @IBOutlet weak var resultTextLabel: UILabel!
+    
+    var answersChoosen: [Answer] = []
+    var acssesLevel = Level.one
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("ResultViewController was been init")
         navigationItem.hidesBackButton = true
         navigationItem.rightBarButtonItem?.title = "Начать заново"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   deinit {
+        print("ResultViewController was been dealocated")
     }
-    */
-
 }
 
 
 // MARK: - Private Methods
 extension ResultViewController {
+
     private func updateUI() {
 
+        
     }
+    
 }

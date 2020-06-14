@@ -8,8 +8,10 @@
 
 import UIKit
 
-class TabBarViewController: UIViewController {
+class TabBarViewController: UITabBarController {
 
+    var acsseslevel = Level.one
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

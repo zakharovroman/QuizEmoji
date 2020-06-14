@@ -13,6 +13,9 @@ class LevelViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var levelButtons: [UIButton]!
     
+    // MARK: - Public properties
+    private var acsseslevel = Level.one
+    
     // MARK: - Private properties
     private var level: Level?
     
@@ -28,6 +31,11 @@ class LevelViewController: UIViewController {
         performSegue(withIdentifier: "categorySegue", sender: nil)
     }
     
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        if let _ = segue.source as? ResultViewController {
+            //  передать доступный уровень
+        }
+    }
 }
 
 // MARK: - Private Methods

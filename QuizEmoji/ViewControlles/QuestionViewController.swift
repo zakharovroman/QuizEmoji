@@ -58,13 +58,15 @@ class QuestionViewController: UIViewController {
     // MARK: - Initializers
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        //print("QuestionViewController was been init")
+        print("QuestionViewController was been init")
     }
     
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if level == nil { level = Level.one }
+        if category == nil { category = Category.auto }
         questions = Question.getQuestions(level: level, category: category)
         currentQuestion = questions[questionIndex]
         
@@ -89,7 +91,7 @@ class QuestionViewController: UIViewController {
     }
     
     deinit {
-         //print("QuestionViewController was been dealocated")
+         print("QuestionViewController was been dealocated")
      }
 }
 
@@ -161,7 +163,7 @@ extension QuestionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "resultSegue" else { return }
         let resultViewController = segue.destination as! ResultViewController
-        resultViewController.result = "Здесь должен быть результат"
+        resultViewController.answersChoosen = answersChoosen
     }
     
 }

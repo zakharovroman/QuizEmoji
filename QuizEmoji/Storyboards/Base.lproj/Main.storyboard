@@ -167,11 +167,12 @@
             </objects>
             <point key="canvasLocation" x="974" y="-281"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="bwg-RJ-czH">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3iq-04-IBm" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3iq-04-IBm" customClass="TabBarViewController" customModule="QuizEmoji" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="8rd-Na-Vxn"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1LS-sP-KF2">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -213,6 +214,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9TP-CU-Yuw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Questions" image="questionmark.circle.fill" catalog="system" id="chE-fJ-fEE"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="1zV-sX-7jt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rt0-YR-Mor">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -385,12 +387,20 @@
                         <viewLayoutGuide key="safeArea" id="Exq-p4-jzt"/>
                     </view>
                     <navigationItem key="navigationItem" title="Результат" id="Pbt-Zx-Hi3">
-                        <barButtonItem key="rightBarButtonItem" title="Закончить" id="8AX-N7-Dn1"/>
+                        <barButtonItem key="rightBarButtonItem" title="Закончить" id="8AX-N7-Dn1">
+                            <connections>
+                                <segue destination="tzt-GK-QDi" kind="unwind" unwindAction="unwindSegueWithSegue:" id="NI1-6s-I8g"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultTextLabel" destination="P4d-pZ-fAD" id="RSR-gC-HzY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7m1-rJ-Nxp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="tzt-GK-QDi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2612" y="-281"/>
+            <point key="canvasLocation" x="206" y="496"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
