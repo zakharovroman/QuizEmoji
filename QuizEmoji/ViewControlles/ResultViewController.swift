@@ -73,7 +73,7 @@ extension ResultViewController {
             }
         }
         var status = StatusTest.Passed
-        if resultCount < 5 {
+        if resultCount < answersChoosen.count {
             resultEmoji = ResultType.notPassed.rawValue
             resultString = ResultType.notPassed.definition
             status = .notPassed
@@ -85,12 +85,12 @@ extension ResultViewController {
         }
         
         // для тестирования
-        let result = Result(level: level, category: category, date: Date(), statusTest: status, points: resultCount, pointsOf: 10)
+        let result = Result(level: level, category: category, date: Date(), statusTest: status, points: resultCount, pointsOf: answersChoosen.count)
         resultsGlobal.append(result)
 
         //delegate.saveResult(result)
         
-        return ("\(resultCount)/5 \(resultEmoji) \(resultString)")
+        return ("\(resultCount)/\(answersChoosen.count) \(resultEmoji) \(resultString)")
         
         
     }
