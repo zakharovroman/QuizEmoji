@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Front" translatesAutoresizingMaskIntoConstraints="NO" id="mBf-Cn-f0C">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LunchScreenStoryboard" translatesAutoresizingMaskIntoConstraints="NO" id="mBf-Cn-f0C">
                                 <rect key="frame" x="42" y="303" width="330" height="290"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="290" id="oES-FP-49z"/>
@@ -37,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Front" width="1041" height="1278"/>
+        <image name="LunchScreenStoryboard" width="500" height="450"/>
     </resources>
 </document>
