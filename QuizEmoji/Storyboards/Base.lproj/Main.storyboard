@@ -94,7 +94,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9RS-n5-faK">
                                 <rect key="frame" x="16" y="94" width="343" height="191.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите категорию" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueS-tC-CvG">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите категорию:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueS-tC-CvG">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -107,7 +107,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="39"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <state key="normal" title="Категория 1"/>
+                                                <state key="normal" title="Автомобили"/>
                                                 <connections>
                                                     <action selector="categoryButtonPressed:" destination="0JD-YK-NzC" eventType="touchUpInside" id="wHg-ZU-uR8"/>
                                                 </connections>
@@ -116,7 +116,7 @@
                                                 <rect key="frame" x="0.0" y="55" width="343" height="39"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <state key="normal" title="Категория 2"/>
+                                                <state key="normal" title="Фильмы"/>
                                                 <connections>
                                                     <action selector="categoryButtonPressed:" destination="0JD-YK-NzC" eventType="touchUpInside" id="1MV-eO-gpt"/>
                                                 </connections>
@@ -125,7 +125,7 @@
                                                 <rect key="frame" x="0.0" y="110" width="343" height="39"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <state key="normal" title="Категория 3"/>
+                                                <state key="normal" title="Книги"/>
                                                 <connections>
                                                     <action selector="categoryButtonPressed:" destination="0JD-YK-NzC" eventType="touchUpInside" id="Zod-Jf-JFy"/>
                                                 </connections>
@@ -134,12 +134,21 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LevelChose" translatesAutoresizingMaskIntoConstraints="NO" id="X6U-kZ-N3B">
+                                <rect key="frame" x="45" y="351" width="285" height="186"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="186" id="VAW-F3-Sz6"/>
+                                    <constraint firstAttribute="width" constant="285" id="Ws4-Go-c03"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="9RS-n5-faK" firstAttribute="top" secondItem="66e-TC-bZF" secondAttribute="top" constant="50" id="3o5-cl-SuI"/>
                             <constraint firstItem="9RS-n5-faK" firstAttribute="leading" secondItem="66e-TC-bZF" secondAttribute="leading" constant="16" id="EFN-ef-500"/>
                             <constraint firstItem="66e-TC-bZF" firstAttribute="trailing" secondItem="9RS-n5-faK" secondAttribute="trailing" constant="16" id="K1J-uv-lSi"/>
+                            <constraint firstItem="X6U-kZ-N3B" firstAttribute="top" secondItem="RdS-FV-Qvu" secondAttribute="bottom" constant="65.5" id="UK4-RY-wbc"/>
+                            <constraint firstItem="X6U-kZ-N3B" firstAttribute="centerX" secondItem="9RS-n5-faK" secondAttribute="centerX" id="WVJ-X1-Y6J"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="66e-TC-bZF"/>
                     </view>
@@ -157,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVo-gh-t04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="974" y="-281"/>
+            <point key="canvasLocation" x="973.60000000000002" y="-281.10944527736132"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="bwg-RJ-czH">
@@ -178,7 +187,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ry1-sO-wMW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1197" y="-273"/>
+            <point key="canvasLocation" x="-1292" y="-280"/>
         </scene>
         <!--Results-->
         <scene sceneID="cet-As-UWZ">
@@ -203,7 +212,6 @@
         <!--Questions-->
         <scene sceneID="OCn-mN-Y5m">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Aj2-DB-JKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9TP-CU-Yuw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Questions" image="questionmark.circle.fill" catalog="system" id="chE-fJ-fEE"/>
                     <toolbarItems/>
@@ -217,8 +225,9 @@
                         <segue destination="be3-j6-r1P" kind="relationship" relationship="rootViewController" id="1TD-v3-7VP"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aj2-DB-JKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-501" y="-281"/>
+            <point key="canvasLocation" x="-556" y="-280"/>
         </scene>
         <!--Вопрос n/10-->
         <scene sceneID="uW3-Jo-m1u">
@@ -396,6 +405,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LevelChose" width="346" height="433"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="square.stack.3d.up.fill" catalog="system" width="128" height="124"/>
     </resources>

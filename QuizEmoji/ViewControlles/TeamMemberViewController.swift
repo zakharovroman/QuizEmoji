@@ -21,7 +21,7 @@ class TeamMemberViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        personFotoLabel.layer.cornerRadius = 15
+        personFotoLabel.layer.cornerRadius = 10
         personFotoLabel.image = UIImage(named: teamInfoForLabel.name)
         
         nameLabel.text = teamInfoForLabel.name
