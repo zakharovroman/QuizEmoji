@@ -24,7 +24,7 @@ extension Question {
                 level: .one,
                 category: .auto,
                 emoji: "🌍🚗🔋🔇",
-                text: "Говорят именно они иземнили мир авто",
+                text: "Говорят именно они изменили мир авто",
                 answers: [
                     Answer(text: "Tesla",
                            correct: true,
