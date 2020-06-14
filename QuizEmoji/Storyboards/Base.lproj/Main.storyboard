@@ -167,10 +167,10 @@
             </objects>
             <point key="canvasLocation" x="974" y="-281"/>
         </scene>
-        <!--Tab Bar View Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="bwg-RJ-czH">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3iq-04-IBm" customClass="TabBarViewController" customModule="QuizEmoji" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3iq-04-IBm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="8rd-Na-Vxn"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1LS-sP-KF2">
