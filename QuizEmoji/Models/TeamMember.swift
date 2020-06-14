@@ -39,13 +39,13 @@ extension TeamMember {
                 name: "Vlad",
                 email: "vladchere.ok@mail.ru",
                 loginGitHub: "Vladchere",
-                position: "ios developer")
+                position: "ios developer"),
             
-//            TeamMember(
-//            name: "Andrey",
-//            email: "Kryukov.ios@yandex.ru",
-//            loginGitHub: "???",
-//            Position: "ios developer")
+            TeamMember(
+            name: "Andrey",
+            email: "Kryukov.ios@yandex.ru",
+            loginGitHub: "KryukovAndrey",
+            position: "ios developer")
         ]
     }
 }
