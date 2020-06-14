@@ -35,6 +35,7 @@ class LevelViewController: UIViewController {
     @IBAction func levelButtonPressed(_ sender: UIButton) {
         guard let levelIndex = levelButtons.firstIndex(of: sender) else { return }
         level = Level.element(at: levelIndex)
+        guard let level = level else { return }
         performSegue(withIdentifier: "categorySegue", sender: nil)
     }
     
