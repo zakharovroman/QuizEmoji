@@ -27,7 +27,6 @@
 		3033E3BA2494C0E9008E6821 /* TeamMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3B92494C0E9008E6821 /* TeamMemberViewController.swift */; };
 		3033E3BE2494C2FE008E6821 /* Team.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3033E3BD2494C2FE008E6821 /* Team.storyboard */; };
 		3033E3C02494C3A2008E6821 /* TeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3BF2494C3A2008E6821 /* TeamMember.swift */; };
-		6365DBDE2496C74600236F7C /* Ang.png in Resources */ = {isa = PBXBuildFile; fileRef = 6365DBDD2496C74500236F7C /* Ang.png */; };
 		86F97F0C2495DB890018F018 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F97F0B2495DB890018F018 /* HeaderCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +53,6 @@
 		3033E3B92494C0E9008E6821 /* TeamMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberViewController.swift; sourceTree = "<group>"; };
 		3033E3BD2494C2FE008E6821 /* Team.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Team.storyboard; sourceTree = "<group>"; };
 		3033E3BF2494C3A2008E6821 /* TeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMember.swift; sourceTree = "<group>"; };
-		6365DBDD2496C74500236F7C /* Ang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ang.png; path = ../../../../Downloads/Ang.png; sourceTree = "<group>"; };
 		86F97F0B2495DB890018F018 /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,7 +147,6 @@
 		3033E39E2494BE52008E6821 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				6365DBDD2496C74500236F7C /* Ang.png */,
 				3033E38F2494BCE7008E6821 /* Assets.xcassets */,
 			);
 			path = Sources;
@@ -216,7 +213,6 @@
 				3033E3932494BCE7008E6821 /* LaunchScreen.storyboard in Resources */,
 				3033E3902494BCE7008E6821 /* Assets.xcassets in Resources */,
 				3033E38E2494BCE6008E6821 /* Main.storyboard in Resources */,
-				6365DBDE2496C74600236F7C /* Ang.png in Resources */,
 				3033E3BE2494C2FE008E6821 /* Team.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
