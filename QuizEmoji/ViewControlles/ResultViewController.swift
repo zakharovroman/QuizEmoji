@@ -17,18 +17,23 @@ class ResultViewController: UIViewController {
     var answersChoosen: [Answer] = []
     var acssesLevel = Level.one
     
+    
     // MARK: - Initializers
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         print("ResultViewController was been init")
     }
     
+   
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
        
         navigationItem.hidesBackButton = true
         navigationItem.rightBarButtonItem?.title = "Начать заново"
+        
+        resultTextLabel.text = printResult()
+        
     }
     
     // MARK: - DeInitializers
@@ -46,4 +51,30 @@ extension ResultViewController {
         
     }
     
+}
+
+extension ResultViewController {
+    
+    func printResult() -> String {
+        var resultCount = 0
+        let resultEmoji: Character
+        let resultString: String
+        
+        for answer in answersChoosen {
+            if answer.points == 1 {
+                resultCount += 1
+            }
+        }
+        
+        if resultCount < 10 {
+            resultEmoji = ResultType.notPassed.rawValue
+            resultString = ResultType.notPassed.definition
+            
+        } else {
+            resultEmoji = ResultType.Passed.rawValue
+            resultString = ResultType.notPassed.definition
+            
+        }
+        return ("\(resultCount)/10 \(resultEmoji) \(resultString)")
+    }
 }
