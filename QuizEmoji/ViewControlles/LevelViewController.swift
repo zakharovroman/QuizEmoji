@@ -19,6 +19,13 @@ class LevelViewController: UIViewController {
     // MARK: - Private properties
     private var level: Level?
     
+    // MARK: - Initializers
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        print("LevelViewController was been init")
+    }
+    
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -35,6 +42,11 @@ class LevelViewController: UIViewController {
         if let _ = segue.source as? ResultViewController {
             //  передать доступный уровень
         }
+    }
+    
+    // MARK: - DeInitializers
+    deinit {
+        print("LevelViewController was been dealocated")
     }
 }
 

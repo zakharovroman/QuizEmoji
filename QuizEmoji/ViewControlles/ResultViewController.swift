@@ -10,19 +10,29 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var resultTextLabel: UILabel!
     
+    // MARK: - Public properties
     var answersChoosen: [Answer] = []
     var acssesLevel = Level.one
     
+    // MARK: - Initializers
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        print("ResultViewController was been init")
+    }
+    
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ResultViewController was been init")
+       
         navigationItem.hidesBackButton = true
         navigationItem.rightBarButtonItem?.title = "Начать заново"
     }
     
-   deinit {
+    // MARK: - DeInitializers
+    deinit {
         print("ResultViewController was been dealocated")
     }
 }

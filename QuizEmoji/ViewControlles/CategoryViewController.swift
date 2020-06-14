@@ -17,15 +17,28 @@ class CategoryViewController: UIViewController {
     var level: Level!
     private var category: Category?
     
+    // MARK: - Initializers
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        print("CategoryViewController was been init")
+    }
+    
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
     }
     
+    // MARK: - IB Actions
     @IBAction func categoryButtonPressed(_ sender: UIButton) {
         guard let categoryIndex = categoryButtons.firstIndex(of: sender) else { return }
         category = Category.element(at: categoryIndex)
         performSegue(withIdentifier: "questionSegue", sender: nil)
+    }
+    
+    // MARK: - DeInitializers
+    deinit {
+        print("CategoryViewController was been dealocated")
     }
     
 }

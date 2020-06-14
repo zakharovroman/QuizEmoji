@@ -90,6 +90,7 @@ class QuestionViewController: UIViewController {
         nextQuestion()
     }
     
+    // MARK: - DeInitializers
     deinit {
          print("QuestionViewController was been dealocated")
      }
