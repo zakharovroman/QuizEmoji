@@ -73,7 +73,7 @@ extension ResultViewController {
             }
         }
         var status = StatusTest.Passed
-        if resultCount < 10 {
+        if resultCount < 5 {
             resultEmoji = ResultType.notPassed.rawValue
             resultString = ResultType.notPassed.definition
             status = .notPassed
@@ -90,7 +90,7 @@ extension ResultViewController {
 
         //delegate.saveResult(result)
         
-        return ("\(resultCount)/10 \(resultEmoji) \(resultString)")
+        return ("\(resultCount)/5 \(resultEmoji) \(resultString)")
         
         
     }
