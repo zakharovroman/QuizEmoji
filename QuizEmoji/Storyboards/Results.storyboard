@@ -82,7 +82,7 @@
         <scene sceneID="nhv-8T-jXN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qoQ-fB-evd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Results" id="7M1-0j-xA7"/>
+                    <tabBarItem key="tabBarItem" title="Results" image="doc.text" catalog="system" id="7M1-0j-xA7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rgv-TM-tNh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -102,4 +102,7 @@
             <point key="canvasLocation" x="-762.31884057971024" y="-269.19642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
+    </resources>
 </document>
