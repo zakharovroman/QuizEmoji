@@ -24,7 +24,7 @@ extension TeamMember {
                 position: "Team lead"),
             
             TeamMember(
-                name: "Angela",
+                name: "Anzhelika Pikulina",
                 email: "angela.pikulina@gmail.com",
                 loginGitHub: "AnzhelikaP",
                 position: "ios developer"),
