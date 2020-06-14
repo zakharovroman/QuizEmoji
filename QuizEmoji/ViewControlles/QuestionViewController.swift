@@ -181,6 +181,8 @@ extension QuestionViewController {
         let resultViewController = segue.destination as! ResultViewController
         resultViewController.answersChoosen = answersChoosen
         resultViewController.delegate = delegate
+        resultViewController.level  = level
+        resultViewController.category = category
     }
     
 }

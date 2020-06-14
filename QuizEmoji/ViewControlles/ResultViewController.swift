@@ -21,6 +21,8 @@ class ResultViewController: UIViewController {
     var delegate: NewResultViewControllerDelegate!
     var answersChoosen: [Answer] = []
     var acssesLevel = Level.one
+    var level: Level!
+    var category: Category!
     
     
     // MARK: - Initializers
@@ -70,10 +72,11 @@ extension ResultViewController {
                 resultCount += 1
             }
         }
-        
+        var status = StatusTest.Passed
         if resultCount < 10 {
             resultEmoji = ResultType.notPassed.rawValue
             resultString = ResultType.notPassed.definition
+            status = .notPassed
             
         } else {
             resultEmoji = ResultType.Passed.rawValue
@@ -81,7 +84,10 @@ extension ResultViewController {
             
         }
         
-//        let result = Result(level: .one, category: .auto, date: Date(), statusTest: .canceled, points: 1, pointsOf: 8)
+        // для тестирования
+        let result = Result(level: level, category: category, date: Date(), statusTest: status, points: resultCount, pointsOf: 10)
+        resultsGlobal.append(result)
+
         //delegate.saveResult(result)
         
         return ("\(resultCount)/10 \(resultEmoji) \(resultString)")

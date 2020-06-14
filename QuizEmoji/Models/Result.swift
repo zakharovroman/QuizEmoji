@@ -16,3 +16,6 @@ struct Result {
     let points: Int
     let pointsOf: Int
 }
+
+
+var resultsGlobal: [Result] = [Result(level: .one, category: .auto, date: Date(), statusTest: .goingThrough, points: 0, pointsOf: 0),]

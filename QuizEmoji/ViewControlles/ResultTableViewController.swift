@@ -15,26 +15,29 @@ class ResultTableViewController: UITableViewController {
     // наполняется по мере прохождения тестов
     // понять что делать если массив пустой
     var responces: [Result] = [
-        Result(level: .one, category: .auto, date: Date(), statusTest: .goingThrough, points: 0, pointsOf: 8),
+ //       Result(level: .one, category: .auto, date: Date(), statusTest: .goingThrough, points: 0, pointsOf: 8),
 //        Result(level: .one, category: .auto, date: Date(), statusTest: .canceled, points: 1, pointsOf: 8),
 //        Result(level: .one, category: .book, date: Date(), statusTest: .goingThrough, points: 2, pointsOf: 8),
 //        Result(level: .one, category: .film, date: Date(), statusTest: .notPassed, points: 3, pointsOf: 8),
 //        Result(level: .one, category: .auto, date: Date(), statusTest: .Passed, points: 8, pointsOf: 8),
 
-        Result(level: .two, category: .auto, date: Date(), statusTest: .canceled, points: 1, pointsOf: 8),
+ //       Result(level: .two, category: .auto, date: Date(), statusTest: .canceled, points: 1, pointsOf: 8),
 //        Result(level: .two, category: .book, date: Date(), statusTest: .goingThrough, points: 2, pointsOf: 8),
 //        Result(level: .two, category: .film, date: Date(), statusTest: .notPassed, points: 3, pointsOf: 8),
 //        Result(level: .two, category: .auto, date: Date(), statusTest: .Passed, points: 8, pointsOf: 8),
 //
 //        Result(level: .three, category: .auto, date: Date(), statusTest: .canceled, points: 1, pointsOf: 8),
-        Result(level: .three, category: .book, date: Date(), statusTest: .goingThrough, points: 2, pointsOf: 8),
+//        Result(level: .three, category: .book, date: Date(), statusTest: .goingThrough, points: 2, pointsOf: 8),
 //        Result(level: .three, category: .film, date: Date(), statusTest: .notPassed, points: 3, pointsOf: 8),
 //        Result(level: .three, category: .auto, date: Date(), statusTest: .Passed, points: 8, pointsOf: 8),
     ]
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        responces = resultsGlobal
         setUI()
     }
 
