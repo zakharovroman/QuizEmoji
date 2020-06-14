@@ -159,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="974" y="-281"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="bwg-RJ-czH">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3iq-04-IBm" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3iq-04-IBm" customClass="TabBarViewController" customModule="QuizEmoji" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="8rd-Na-Vxn"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1LS-sP-KF2">
@@ -184,7 +184,7 @@
         <scene sceneID="cet-As-UWZ">
             <objects>
                 <viewControllerPlaceholder storyboardName="Results" id="F8g-Qt-okL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zGN-Ml-Zgj"/>
+                    <tabBarItem key="tabBarItem" title="Results" image="doc.text" catalog="system" id="zGN-Ml-Zgj"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdI-sr-RXO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -396,6 +396,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="square.stack.3d.up.fill" catalog="system" width="128" height="124"/>
     </resources>

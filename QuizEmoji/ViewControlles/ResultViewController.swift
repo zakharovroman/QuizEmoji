@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol NewResultViewControllerDelegate {
+    func saveResult(_ result: Result)
+}
+
 class ResultViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var resultTextLabel: UILabel!
     
     // MARK: - Public properties
+    var delegate: NewResultViewControllerDelegate!
     var answersChoosen: [Answer] = []
     var acssesLevel = Level.one
     
@@ -75,6 +80,12 @@ extension ResultViewController {
             resultString = ResultType.Passed.definition
             
         }
+        
+//        let result = Result(level: .one, category: .auto, date: Date(), statusTest: .canceled, points: 1, pointsOf: 8)
+        //delegate.saveResult(result)
+        
         return ("\(resultCount)/10 \(resultEmoji) \(resultString)")
+        
+        
     }
 }

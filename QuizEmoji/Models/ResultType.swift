@@ -9,13 +9,19 @@
 enum ResultType: Character {
     case notPassed = "😢"
     case Passed = "😀"
-
+    case wrong = "🤣"
+    case correctly = "😇"
+    
     var definition: String {
         switch self {
         case .notPassed:
             return "Вы не прошли. Попробуйте снова!"
         case .Passed:
             return "Поздравляем! Вы прошли испытание!"
+        case .wrong:
+            return "Ответ не верный!"
+        case .correctly:
+            return "Вы ответили верно!"
         }
     }
 }

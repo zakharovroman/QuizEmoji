@@ -159,3 +159,10 @@ class ResultTableViewController: UITableViewController {
         return formattedDate
     }
 }
+
+
+extension ResultTableViewController: NewResultViewControllerDelegate {
+    public func saveResult(_ result: Result) {
+        responces.append(result)
+    }
+}

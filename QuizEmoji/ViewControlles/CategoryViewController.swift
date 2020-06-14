@@ -13,6 +13,9 @@ class CategoryViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var categoryButtons: [UIButton]!
     
+    // MARK: - Public properties
+    var delegate: NewResultViewControllerDelegate!
+    
     // MARK: - Private properties
     var level: Level!
     private var category: Category?
@@ -65,6 +68,7 @@ extension CategoryViewController {
             let questionViewController = segue.destination as! QuestionViewController
             questionViewController.level = level
             questionViewController.category = category
+            questionViewController.delegate = delegate
         }
     }
     

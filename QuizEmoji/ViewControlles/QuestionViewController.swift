@@ -11,17 +11,18 @@ import UIKit
 
 MARK: перед классом перечисления и структуры
  
-MARK: IBOutlets - аутлеты
-MARK: Public properties - публичные переменные и константы
-MARK: Private properties - приватные переменные и константы
-MARK: Initializers - инициализаторы класса
-MARK: Override Methods - переопределенные методы
- MARK: Life Cycles Methods  - отдельные типы переопределенных методов
- MARK: Navigation - переопределяемые методы для навигации
+MARK: - IBOutlets - аутлеты
+MARK: - Public properties - публичные переменные и константы
+MARK: - Private properties - приватные переменные и константы
+MARK: - Initializers - инициализаторы класса
+MARK: - Override Methods - переопределенные методы
+ MARK: - Life Cycles Methods  - отдельные типы переопределенных методов
+ MARK: - Navigation - переопределяемые методы для навигации
   Если же вы работаете с вью контроллером, то переопределенные методы идут сразу после свойств класса
-MARK: IBActions - методы связанные с пользовательским интерфейсом
-MARK: Public Methods - публичные методы класса
-MARK: Private Methods - приватные методы класса
+MARK: - IBActions - методы связанные с пользовательским интерфейсом
+MARK: - Public Methods - публичные методы класса
+MARK: - Private Methods - приватные методы класса
+MARK: - DeInitializers - деинициализаторы класса
 MARK: Extensions после класса
  
 */
@@ -42,6 +43,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var answerTextLabel: UILabel!
     
     // MARK: - Public properties
+    var delegate: NewResultViewControllerDelegate!
     var level: Level!
     var category: Category!
     
@@ -82,7 +84,7 @@ class QuestionViewController: UIViewController {
         guard let answerIndex = answersButtons.firstIndex(of: sender) else { return }
         let currentAnswer = currentAnswers[answerIndex]
         answersChoosen.append(currentAnswer)
-        showCurrentAnswer(with: currentAnswer)
+        showCurrentAnswer(with: currentAnswer, of: currentAnswers)
     }
     
     @IBAction func nextQuestionBarButtonItem(_ sender: UIBarButtonItem) {
@@ -107,7 +109,8 @@ extension QuestionViewController {
         for item in [questionEmojiTextStackView, answersBattonsStackView] {
             item?.isHidden = false
         }
-            
+        navigationItem.rightBarButtonItem?.title = "Пропустить"
+        
         // Set current question UI
         questionEmojiLabel.text = currentQuestion?.emoji
         questionTextLabel.text = currentQuestion?.text
@@ -130,13 +133,28 @@ extension QuestionViewController {
         }
     }
     
-    private func showCurrentAnswer(with currentAnswer: Answer) {
+    private func showCurrentAnswer(with currentAnswer: Answer, of currentAnswers: [Answer]) {
         // Hide everything in Question
         for item in [questionEmojiTextStackView, answersBattonsStackView] {
             item?.isHidden = true
         }
         answerTextLabel.isHidden = false
-        answerTextLabel.text = currentAnswer.text
+        navigationItem.rightBarButtonItem?.title = "Следующий"
+        
+        var answerText = ""
+        if currentAnswer.correct {
+            answerText = String(ResultType.correctly.rawValue) + " " + ResultType.correctly.definition
+        } else {
+            answerText = String(ResultType.wrong.rawValue) + " " + ResultType.wrong.definition
+        }
+        for answer in currentAnswers {
+            if answer.correct {
+                answerText += "\n\n"
+                answerText +=  !currentAnswer.correct  ? "\n Правильный ответ:":""
+                answerText += "\n" + answer.text + "\n\n" + answer.answerText
+            }
+        }
+        answerTextLabel.text = answerText
     }
 
 }
@@ -155,8 +173,6 @@ extension QuestionViewController {
     }
     
     @objc private func cancelTest() {
-        //self.dismiss(animated: true, completion: nil)
-        //self.dismissViewControllerAnimated(true, completion: nil)
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -164,6 +180,7 @@ extension QuestionViewController {
         guard segue.identifier == "resultSegue" else { return }
         let resultViewController = segue.destination as! ResultViewController
         resultViewController.answersChoosen = answersChoosen
+        resultViewController.delegate = delegate
     }
     
 }

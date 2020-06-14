@@ -14,7 +14,8 @@ class LevelViewController: UIViewController {
     @IBOutlet var levelButtons: [UIButton]!
     
     // MARK: - Public properties
-    private var acsseslevel = Level.one
+    public var acsseslevel = Level.one
+    var delegate: NewResultViewControllerDelegate!
     
     // MARK: - Private properties
     private var level: Level?
@@ -28,6 +29,7 @@ class LevelViewController: UIViewController {
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        //delegate = refResultTableViewController
         updateUI()
     }
     
@@ -69,6 +71,7 @@ extension LevelViewController {
         if segue.identifier == "categorySegue" {
             let categoryViewController = segue.destination as! CategoryViewController
             categoryViewController.level = level
+            categoryViewController.delegate = delegate
         }
     }
     
