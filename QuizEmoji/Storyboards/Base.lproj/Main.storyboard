@@ -70,11 +70,7 @@
                     <tabBarItem key="tabBarItem" title="Level" image="square.stack.3d.up.fill" catalog="system" id="vHr-AI-yNB"/>
                     <navigationItem key="navigationItem" id="Rha-Pu-lR6">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="LOj-YL-9mU"/>
-                        <barButtonItem key="rightBarButtonItem" title="Вперед" id="1Vu-G0-Fcv">
-                            <connections>
-                                <segue destination="0JD-YK-NzC" kind="show" id="r87-hk-O1D"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="1Vu-G0-Fcv"/>
                     </navigationItem>
                     <connections>
                         <outletCollection property="levelButtons" destination="Ive-dt-bfW" collectionClass="NSMutableArray" id="xXQ-Fa-hNX"/>
@@ -150,11 +146,7 @@
                     <tabBarItem key="tabBarItem" title="Category" id="Boy-PJ-5fq"/>
                     <navigationItem key="navigationItem" id="w8R-HR-1L2">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="IaZ-4R-O5E"/>
-                        <barButtonItem key="rightBarButtonItem" title="Вперед" id="H5L-Qg-l9L">
-                            <connections>
-                                <segue destination="My8-Km-hPo" kind="show" id="yfQ-HM-6BP"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="H5L-Qg-l9L"/>
                     </navigationItem>
                     <connections>
                         <outletCollection property="categoryButtons" destination="SiC-ZS-vMk" collectionClass="NSMutableArray" id="L24-ek-PWk"/>
@@ -403,10 +395,6 @@
             <point key="canvasLocation" x="206" y="496"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="YRT-TE-SgZ"/>
-        <segue reference="r87-hk-O1D"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="square.stack.3d.up.fill" catalog="system" width="128" height="124"/>

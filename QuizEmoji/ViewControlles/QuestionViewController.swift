@@ -65,8 +65,7 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if level == nil { level = Level.one }
-        if category == nil { category = Category.auto }
+        // можно перенести передачу из категории чтобы два раза вопросы не получать
         questions = Question.getQuestions(level: level, category: category)
         currentQuestion = questions[questionIndex]
         

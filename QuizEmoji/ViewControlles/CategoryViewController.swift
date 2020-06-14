@@ -33,6 +33,9 @@ class CategoryViewController: UIViewController {
     @IBAction func categoryButtonPressed(_ sender: UIButton) {
         guard let categoryIndex = categoryButtons.firstIndex(of: sender) else { return }
         category = Category.element(at: categoryIndex)
+        guard let category = category else { return }
+        let questions = Question.getQuestions(level: level, category: category)
+        guard questions.count != 0 else { return }
         performSegue(withIdentifier: "questionSegue", sender: nil)
     }
     
