@@ -180,6 +180,7 @@ extension QuestionViewController {
         guard segue.identifier == "resultSegue" else { return }
         let resultViewController = segue.destination as! ResultViewController
         resultViewController.answersChoosen = answersChoosen
+        resultViewController.questionsCount = questions.count
         resultViewController.delegate = delegate
         resultViewController.level  = level
         resultViewController.category = category

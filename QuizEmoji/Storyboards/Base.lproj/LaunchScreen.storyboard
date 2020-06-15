@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LunchScreenStoryboard" translatesAutoresizingMaskIntoConstraints="NO" id="mBf-Cn-f0C">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="front_" translatesAutoresizingMaskIntoConstraints="NO" id="mBf-Cn-f0C">
                                 <rect key="frame" x="42" y="303" width="330" height="290"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="290" id="oES-FP-49z"/>
@@ -23,7 +23,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mBf-Cn-f0C" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="W3T-Cu-UmT"/>
                             <constraint firstItem="mBf-Cn-f0C" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-5" id="r2g-2M-by9"/>
@@ -37,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LunchScreenStoryboard" width="500" height="450"/>
+        <image name="front_" width="500" height="450"/>
     </resources>
 </document>

@@ -13,17 +13,17 @@ protocol NewResultViewControllerDelegate {
 }
 
 class ResultViewController: UIViewController {
-
+    
     // MARK: - IBOutlets
     @IBOutlet weak var resultTextLabel: UILabel!
     
     // MARK: - Public properties
     var delegate: NewResultViewControllerDelegate!
     var answersChoosen: [Answer] = []
+    var questionsCount = 0
     var acssesLevel = Level.one
     var level: Level!
     var category: Category!
-    
     
     // MARK: - Initializers
     required init?(coder: NSCoder) {
@@ -31,11 +31,12 @@ class ResultViewController: UIViewController {
         print("ResultViewController was been init")
     }
     
-   
+    
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        
         navigationItem.hidesBackButton = true
         navigationItem.rightBarButtonItem?.title = "Начать заново"
         
@@ -52,9 +53,9 @@ class ResultViewController: UIViewController {
 
 // MARK: - Private Methods
 extension ResultViewController {
-
+    
     private func updateUI() {
-
+        
         
     }
     
@@ -63,35 +64,33 @@ extension ResultViewController {
 extension ResultViewController {
     
     func printResult() -> String {
-        var resultCount = 0
-        let resultEmoji: Character
-        let resultString: String
         
-        for answer in answersChoosen {
-            if answer.points == 1 {
-                resultCount += 1
+        var resultEmoji = ResultType.notPassed.rawValue
+        var resultString = ResultType.notPassed.definition
+        var status = StatusTest.notPassed
+        var resultCount = 0
+        
+        
+            for answer in answersChoosen {
+                if answer.points == 1 {
+                    resultCount += 1
+                }
+           
+            
+            if resultCount == questionsCount {
+                resultEmoji = ResultType.Passed.rawValue
+                resultString = ResultType.Passed.definition
+                status = .Passed
             }
-        }
-        var status = StatusTest.Passed
-        if resultCount < answersChoosen.count {
-            resultEmoji = ResultType.notPassed.rawValue
-            resultString = ResultType.notPassed.definition
-            status = .notPassed
-            
-        } else {
-            resultEmoji = ResultType.Passed.rawValue
-            resultString = ResultType.Passed.definition
-            
         }
         
         // для тестирования
-        let result = Result(level: level, category: category, date: Date(), statusTest: status, points: resultCount, pointsOf: answersChoosen.count)
+        let result = Result(level: level, category: category, date: Date(), statusTest: status, points: resultCount, pointsOf: questionsCount)
         resultsGlobal.append(result)
-
+        
         //delegate.saveResult(result)
         
-        return ("\(resultCount)/\(answersChoosen.count) \(resultEmoji) \(resultString)")
-        
+        return ("\(resultCount)/\(questionsCount) \(resultEmoji) \(resultString)")
         
     }
 }
