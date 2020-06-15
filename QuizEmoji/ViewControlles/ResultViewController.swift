@@ -84,12 +84,6 @@ extension ResultViewController {
             }
         }
         
-        // для тестирования
-        let result = Result(level: level, category: category, date: Date(), statusTest: status, points: resultCount, pointsOf: questionsCount)
-        resultsGlobal.append(result)
-        
-        //delegate.saveResult(result)
-        
         return ("\(resultCount)/\(questionsCount) \(resultEmoji) \(resultString)")
         
     }

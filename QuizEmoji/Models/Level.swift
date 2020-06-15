@@ -11,16 +11,6 @@ enum Level: String, CaseIterable {
     case two = "Продвинутый"
     case three = "Экспертный"
     
-    //Возвращает по элементу индекс
-    static func index(of element: Level) -> Int {
-        var elements: [Level] = []
-        for element in Level.allCases {
-            elements.append(element)
-        }
-
-        return elements.firstIndex(of: element)!
-    }
-    
     //Возвращает по индексу элемент
     static func element(at index: Int) -> Level? {
         var elements: [Level] = []

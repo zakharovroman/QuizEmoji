@@ -7,25 +7,6 @@
 //
 
 import UIKit
-/* Шаблон структуры класса
-
-MARK: перед классом перечисления и структуры
- 
-MARK: - IBOutlets - аутлеты
-MARK: - Public properties - публичные переменные и константы
-MARK: - Private properties - приватные переменные и константы
-MARK: - Initializers - инициализаторы класса
-MARK: - Override Methods - переопределенные методы
- MARK: - Life Cycles Methods  - отдельные типы переопределенных методов
- MARK: - Navigation - переопределяемые методы для навигации
-  Если же вы работаете с вью контроллером, то переопределенные методы идут сразу после свойств класса
-MARK: - IBActions - методы связанные с пользовательским интерфейсом
-MARK: - Public Methods - публичные методы класса
-MARK: - Private Methods - приватные методы класса
-MARK: - DeInitializers - деинициализаторы класса
-MARK: Extensions после класса
- 
-*/
 
 class QuestionViewController: UIViewController {
 
@@ -54,13 +35,6 @@ class QuestionViewController: UIViewController {
     private var answersChoosen: [Answer] = []
     private var currentAnswers: [Answer] {
         questions[questionIndex].answers
-    }
-    //private var currentAnswer: Answer?
-    
-    // MARK: - Initializers
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        print("QuestionViewController was been init")
     }
     
     // MARK: - Override Methods
@@ -91,12 +65,7 @@ class QuestionViewController: UIViewController {
         nextQuestion()
     }
     
-    // MARK: - DeInitializers
-    deinit {
-         print("QuestionViewController was been dealocated")
-     }
 }
-
 
 // MARK: - Private Methods
 extension QuestionViewController {

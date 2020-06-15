@@ -11,16 +11,6 @@ enum Category: String, CaseIterable {
     case film = "Кино"
     case book = "Книги"
     
-    //Возвращает по элементу индекс
-    static func index(of element: Category) -> Int {
-        var elements: [Category] = []
-        for element in Category.allCases {
-            elements.append(element)
-        }
-
-        return elements.firstIndex(of: element)!
-    }
-    
     //Возвращает по индексу элемент
     static func element(at index: Int) -> Category? {
         var elements: [Category] = []
