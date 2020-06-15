@@ -123,8 +123,9 @@ extension QuestionViewController {
 
         // Set navigation title
         title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
-
-        showAnswersButtons(with: currentAnswers)
+        
+        let currentAnswersNew = currentAnswers.shuffled()
+        showAnswersButtons(with: currentAnswersNew)
     }
     
     private func showAnswersButtons(with answers: [Answer]) {
