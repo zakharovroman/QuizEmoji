@@ -13,23 +13,12 @@ class LevelViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var levelButtons: [UIButton]!
     
-    // MARK: - Public properties
-    public var acsseslevel = Level.one
-    var delegate: NewResultViewControllerDelegate!
-    
     // MARK: - Private properties
     private var level: Level?
-    
-    // MARK: - Initializers
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        print("LevelViewController was been init")
-    }
     
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        //delegate = refResultTableViewController
         updateUI()
     }
     
@@ -42,15 +31,9 @@ class LevelViewController: UIViewController {
     }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-        if let _ = segue.source as? ResultViewController {
-            //  передать доступный уровень
-        }
+        
     }
     
-    // MARK: - DeInitializers
-    deinit {
-        print("LevelViewController was been dealocated")
-    }
 }
 
 // MARK: - Private Methods
@@ -71,7 +54,6 @@ extension LevelViewController {
         if segue.identifier == "categorySegue" {
             let categoryViewController = segue.destination as! CategoryViewController
             categoryViewController.level = level
-            categoryViewController.delegate = delegate
         }
     }
     

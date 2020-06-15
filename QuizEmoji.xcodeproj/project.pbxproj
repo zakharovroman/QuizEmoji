@@ -16,9 +16,7 @@
 		3033E3A22494BF67008E6821 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3A12494BF67008E6821 /* Category.swift */; };
 		3033E3A42494BF86008E6821 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3A32494BF86008E6821 /* Level.swift */; };
 		3033E3A62494BFA8008E6821 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3A52494BFA8008E6821 /* Question.swift */; };
-		3033E3A82494BFC4008E6821 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3A72494BFC4008E6821 /* Result.swift */; };
 		3033E3AA2494BFDF008E6821 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3A92494BFDF008E6821 /* ResultType.swift */; };
-		3033E3AC2494BFFC008E6821 /* StatusTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3AB2494BFFC008E6821 /* StatusTest.swift */; };
 		3033E3AE2494C063008E6821 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3AD2494C063008E6821 /* LevelViewController.swift */; };
 		3033E3B02494C075008E6821 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3AF2494C075008E6821 /* CategoryViewController.swift */; };
 		3033E3B22494C085008E6821 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3B12494C085008E6821 /* QuestionViewController.swift */; };
@@ -27,7 +25,6 @@
 		3033E3BA2494C0E9008E6821 /* TeamMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3B92494C0E9008E6821 /* TeamMemberViewController.swift */; };
 		3033E3BE2494C2FE008E6821 /* Team.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3033E3BD2494C2FE008E6821 /* Team.storyboard */; };
 		3033E3C02494C3A2008E6821 /* TeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033E3BF2494C3A2008E6821 /* TeamMember.swift */; };
-		86F97F0C2495DB890018F018 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F97F0B2495DB890018F018 /* HeaderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,9 +39,7 @@
 		3033E3A12494BF67008E6821 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		3033E3A32494BF86008E6821 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		3033E3A52494BFA8008E6821 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		3033E3A72494BFC4008E6821 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		3033E3A92494BFDF008E6821 /* ResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
-		3033E3AB2494BFFC008E6821 /* StatusTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTest.swift; sourceTree = "<group>"; };
 		3033E3AD2494C063008E6821 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 		3033E3AF2494C075008E6821 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		3033E3B12494C085008E6821 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +48,6 @@
 		3033E3B92494C0E9008E6821 /* TeamMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberViewController.swift; sourceTree = "<group>"; };
 		3033E3BD2494C2FE008E6821 /* Team.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Team.storyboard; sourceTree = "<group>"; };
 		3033E3BF2494C3A2008E6821 /* TeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMember.swift; sourceTree = "<group>"; };
-		86F97F0B2495DB890018F018 /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +106,6 @@
 				3033E3AF2494C075008E6821 /* CategoryViewController.swift */,
 				3033E3B12494C085008E6821 /* QuestionViewController.swift */,
 				3033E3B32494C09A008E6821 /* ResultViewController.swift */,
-				86F97F0B2495DB890018F018 /* HeaderCell.swift */,
 				3033E3B72494C0C9008E6821 /* TeamTableViewController.swift */,
 				3033E3B92494C0E9008E6821 /* TeamMemberViewController.swift */,
 			);
@@ -126,9 +119,7 @@
 				3033E3A12494BF67008E6821 /* Category.swift */,
 				3033E3A32494BF86008E6821 /* Level.swift */,
 				3033E3A52494BFA8008E6821 /* Question.swift */,
-				3033E3A72494BFC4008E6821 /* Result.swift */,
 				3033E3A92494BFDF008E6821 /* ResultType.swift */,
-				3033E3AB2494BFFC008E6821 /* StatusTest.swift */,
 				3033E3BF2494C3A2008E6821 /* TeamMember.swift */,
 			);
 			path = Models;
@@ -231,15 +222,12 @@
 				3033E3C02494C3A2008E6821 /* TeamMember.swift in Sources */,
 				3033E3B02494C075008E6821 /* CategoryViewController.swift in Sources */,
 				3033E3B82494C0C9008E6821 /* TeamTableViewController.swift in Sources */,
-				86F97F0C2495DB890018F018 /* HeaderCell.swift in Sources */,
 				3033E3872494BCE6008E6821 /* AppDelegate.swift in Sources */,
 				3033E3B22494C085008E6821 /* QuestionViewController.swift in Sources */,
 				3033E3AA2494BFDF008E6821 /* ResultType.swift in Sources */,
 				3033E3892494BCE6008E6821 /* SceneDelegate.swift in Sources */,
 				3033E3B42494C09A008E6821 /* ResultViewController.swift in Sources */,
 				3033E3A62494BFA8008E6821 /* Question.swift in Sources */,
-				3033E3AC2494BFFC008E6821 /* StatusTest.swift in Sources */,
-				3033E3A82494BFC4008E6821 /* Result.swift in Sources */,
 				3033E3A02494BF54008E6821 /* Answer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

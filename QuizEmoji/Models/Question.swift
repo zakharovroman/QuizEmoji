@@ -11,14 +11,14 @@ struct Question {
     let category: Category
     let emoji: String
     let text: String
-    let answers: [Answer]
+    var answers: [Answer]
 }
 
 extension Question {
     
     static func getQuestions() -> [Question] {
         
-        return [
+        let question =  [
             // MARK: - LevelOne Auto
             Question(
                 level: .one,
@@ -42,7 +42,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .one,
@@ -66,7 +66,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .one,
@@ -90,7 +90,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .one,
@@ -114,7 +114,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .one,
@@ -138,7 +138,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             // MARK: - LevelOne Film
             Question(
@@ -163,7 +163,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .one,
@@ -187,7 +187,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .one,
@@ -211,7 +211,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .one,
@@ -235,7 +235,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .one,
@@ -259,7 +259,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             // MARK: - LevelOne Books
             Question(
@@ -284,7 +284,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .one,
@@ -308,7 +308,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .one,
@@ -332,7 +332,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .one,
@@ -356,7 +356,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .one,
@@ -380,7 +380,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             // MARK: - LevelTwo Auto
             Question(
@@ -405,7 +405,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .two,
@@ -429,7 +429,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .two,
@@ -453,7 +453,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .two,
@@ -477,7 +477,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .two,
@@ -501,7 +501,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             //MARK: - LevelTwo Film
             Question(
@@ -526,7 +526,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .two,
@@ -550,7 +550,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .two,
@@ -574,7 +574,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .two,
@@ -598,7 +598,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .two,
@@ -622,7 +622,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             //MARK: - LevelTwo Books
             Question(
@@ -647,7 +647,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .two,
@@ -671,7 +671,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .two,
@@ -695,7 +695,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .two,
@@ -719,7 +719,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .two,
@@ -743,7 +743,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             //MARK: - LevelThree Car
             Question(
@@ -768,7 +768,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .three,
@@ -792,7 +792,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .three,
@@ -816,7 +816,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .three,
@@ -840,7 +840,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .three,
@@ -864,7 +864,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             //MARK: - LevelThree Film
             Question(
@@ -889,7 +889,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .three,
@@ -913,7 +913,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .three,
@@ -937,7 +937,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .three,
@@ -961,7 +961,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .three,
@@ -985,7 +985,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             //MARK: - LevelThree Books
             Question(
@@ -1010,7 +1010,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .three,
@@ -1034,7 +1034,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .three,
@@ -1058,7 +1058,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .three,
@@ -1082,7 +1082,7 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
             Question(
                 level: .three,
@@ -1106,24 +1106,19 @@ extension Question {
                            correct: false,
                            answerText: "Не верно",
                            points: 0)
-                ]
+                ].shuffled()
             ),
         ]
+        
+        return question
     }
     
-    
-    
-    
     static func getQuestions(level: Level, category: Category) -> [Question] {
-        
-        var count = 0
         var questionsFilter = [Question]()
         let questions = getQuestions()
         for question in questions {
-            guard count <= 10 else { break }
             if level == question.level && category == question.category {
                 questionsFilter.append(question)
-                count += 1
             }
         }
         return questionsFilter.shuffled()

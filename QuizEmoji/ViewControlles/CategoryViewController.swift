@@ -13,18 +13,9 @@ class CategoryViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var categoryButtons: [UIButton]!
     
-    // MARK: - Public properties
-    var delegate: NewResultViewControllerDelegate!
-    
     // MARK: - Private properties
     var level: Level!
     private var category: Category?
-    
-    // MARK: - Initializers
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        print("CategoryViewController was been init")
-    }
     
     // MARK: - Override Methods
     override func viewDidLoad() {
@@ -40,11 +31,6 @@ class CategoryViewController: UIViewController {
         let questions = Question.getQuestions(level: level, category: category)
         guard questions.count != 0 else { return }
         performSegue(withIdentifier: "questionSegue", sender: nil)
-    }
-    
-    // MARK: - DeInitializers
-    deinit {
-        print("CategoryViewController was been dealocated")
     }
     
 }
@@ -68,7 +54,6 @@ extension CategoryViewController {
             let questionViewController = segue.destination as! QuestionViewController
             questionViewController.level = level
             questionViewController.category = category
-            questionViewController.delegate = delegate
         }
     }
     

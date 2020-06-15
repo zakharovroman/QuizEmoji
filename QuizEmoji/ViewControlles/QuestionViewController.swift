@@ -24,7 +24,6 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var answerTextLabel: UILabel!
     
     // MARK: - Public properties
-    var delegate: NewResultViewControllerDelegate!
     var level: Level!
     var category: Category!
     
@@ -93,8 +92,7 @@ extension QuestionViewController {
         // Set navigation title
         title = "Вопрос № \(questionIndex + 1) из \(questions.count)"
         
-        let currentAnswersNew = currentAnswers.shuffled()
-        showAnswersButtons(with: currentAnswersNew)
+        showAnswersButtons(with: currentAnswers)
     }
     
     private func showAnswersButtons(with answers: [Answer]) {
@@ -151,9 +149,6 @@ extension QuestionViewController {
         let resultViewController = segue.destination as! ResultViewController
         resultViewController.answersChoosen = answersChoosen
         resultViewController.questionsCount = questions.count
-        resultViewController.delegate = delegate
-        resultViewController.level  = level
-        resultViewController.category = category
     }
     
 }
